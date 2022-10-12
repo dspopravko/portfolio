@@ -1,0 +1,66 @@
+:root {
+    /* Palette */
+    --white-color: #fff;
+    --black-color: #262626;
+    --black25-color: #42413d;
+    --black10-color: #e1e1e1;
+    --light-gray-color: #efefef;
+    --gray-color: #dad8d3;
+    --gray-dark-color: #c7c7c7;
+    --green-color: #20ae44;
+    --green50-color: #009627;
+    --red-color: #ff6124;
+    --yellow-color: #fae361;
+    --bottom-shadow: 0 -1px 4px rgba(0, 0, 0, .35);
+    --upper-shadow: 0 -4px 4px rgba(0, 0, 0, .04);
+
+    /* App Theme */
+    --primary-color: var(--green-color);
+    --destructive-color: var(--red-color);
+    --text-on-light-bg-color: var(--black-color);
+    --text-on-dark-bg-color: var(--white-color)
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
+    transition: ease 0.2s;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.App {
+    --bg-color: #fff;
+    --container-color: #f1f1f1;
+    --text-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+.shadowBottom {
+    box-shadow: var(--bottom-shadow)
+}
+.shadowUp {
+    box-shadow: var(--upper-shadow)
+}
+.dark {
+    --bg-color: #1e1e1e;
+    --container-color: #262626;
+    --text-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.module {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+}

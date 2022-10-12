@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.btn {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    user-focus: outline-none;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.light {
+    opacity: 0.5;
+    color: #ff6124;
+}
+
+.dark {
+    opacity: 0.5;
+    color: #2483ff;
+}
