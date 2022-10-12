@@ -7,15 +7,15 @@
     --light-gray-color: #efefef;
     --gray-color: #dad8d3;
     --gray-dark-color: #c7c7c7;
-    --green-color: #20ae44;
-    --green50-color: #009627;
-    --red-color: #ff6124;
+    --blue-color: #5095BF;
+    --dark-blue-color: #416CA6;
+    --red-color: #D98C5F;
     --yellow-color: #fae361;
     --bottom-shadow: 0 -1px 4px rgba(0, 0, 0, .35);
     --upper-shadow: 0 -4px 4px rgba(0, 0, 0, .04);
 
     /* App Theme */
-    --primary-color: var(--green-color);
+    --primary-color: var(--blue-color);
     --destructive-color: var(--red-color);
     --text-on-light-bg-color: var(--black-color);
     --text-on-dark-bg-color: var(--white-color)
@@ -32,7 +32,7 @@ html {
 
 .App {
     --bg-color: #fff;
-    --container-color: #f1f1f1;
+    --container-color: #f1f5f6;
     --text-color: #1e1e1e;
     display: flex;
     flex-direction: column;

@@ -41,3 +41,14 @@
     gap: 20px;
     opacity: 0.8;
 }
+.blob {
+    width: 200px;
+    fill: var(--primary-color);
+}
+.profilePicture {
+    width: 170px;
+    transition: ease-in-out .6s;
+}
+.profilePicture:hover {
+    width: 172px;
+}
