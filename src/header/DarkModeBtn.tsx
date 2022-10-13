@@ -7,6 +7,7 @@ export const DarkModeBtn = () => {
     return (
         <div className={s.container}>
                 <button
+                    style={{boxShadow: 'none'}}
                     aria-label="Toggle Dark Mode"
                     type="button"
                     className={s.btn}

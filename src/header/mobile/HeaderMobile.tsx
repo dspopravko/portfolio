@@ -8,15 +8,15 @@ export const HeaderMobile = () => {
     return (
         <>
             <div className={open ? s.mobileMenu : s.mobileMenu + ' shadowUp'}>
+                <div className={s.title} onClick={()=> {window.scrollTo(0, 0)}}>
+                    Demid
+                </div>
                 <div className={s.btnWrapper}>
                     <button onClick={() => setOpen(!open)}
                             className={s.menuBtn}>
                         Menu
                     </button>
                     <DarkModeBtn/>
-                </div>
-                <div className={s.title}>
-                    Demid
                 </div>
             </div>
             <div className={open ? s.headerOpen : s.headerClose}>

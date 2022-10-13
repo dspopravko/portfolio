@@ -3,24 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
-    min-height: 360px;
     width: 100%;
     background-color: var(--bg-color);
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 10px;
 }
 .title {
     color: var(--text-color);
     text-align: center;
-    border: 2px solid red;
     width: 100%;
 }
 .container {
     color: var(--text-color);
     min-height: 100px;
     width: 100%;
-    border: 2px solid springgreen;
     padding: 15px;
     display: flex;
     justify-content: space-evenly;
@@ -28,16 +24,4 @@
     align-items: stretch;
     gap: 60px;
     flex-wrap: wrap;
-}
-.container button {
-    border-radius: 3px;
-    border: none;
-    color: var(--white-color);
-    background: var(--primary-color);
-    padding: 15px;
-}
-.container button:hover {
-    border-radius: 3px;
-    color: var(--white-color);
-    background: var(--green50-color);
 }

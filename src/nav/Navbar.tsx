@@ -9,7 +9,7 @@ export const Navbar = () => {
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#remote">Contacts</a>
-            <a href="" onClick={(e)=> e.preventDefault()}>Download CV</a>
+            <a target={"_blank"} style={{color: 'red'}} href="https://youtu.be/dQw4w9WgXcQ">CV</a>
         </div>
     );
 }

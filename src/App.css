@@ -1,28 +1,26 @@
 :root {
     /* Palette */
     --white-color: #fff;
-    --black-color: #262626;
-    --black25-color: #42413d;
-    --black10-color: #e1e1e1;
-    --light-gray-color: #efefef;
-    --gray-color: #dad8d3;
-    --gray-dark-color: #c7c7c7;
+    --black-color: #000;
+    --very-light-color: #f1f5f6;
+    --light-gray-color: #e1e1e1;
+    --dark-grey-color: #262626;
+    --very-dark-grey-color: #1e1e1e;
     --blue-color: #5095BF;
     --dark-blue-color: #416CA6;
-    --red-color: #D98C5F;
-    --yellow-color: #fae361;
-    --bottom-shadow: 0 -1px 4px rgba(0, 0, 0, .35);
+    --orange-color: #D98C5FFF;
+    --container-shadow:  0 0px 4px rgba(0, 0, 0, .15);
+    --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, .35);
     --upper-shadow: 0 -4px 4px rgba(0, 0, 0, .04);
 
     /* App Theme */
     --primary-color: var(--blue-color);
-    --destructive-color: var(--red-color);
+    --destructive-color: var(--orange-color);
     --text-on-light-bg-color: var(--black-color);
     --text-on-dark-bg-color: var(--white-color)
 }
 
 * {
-    box-sizing: border-box;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
     transition: ease 0.2s;
 }
@@ -30,15 +28,49 @@ html {
     scroll-behavior: smooth;
 }
 
+.App-header {
+    width: 100%;
+}
 .App {
-    --bg-color: #fff;
-    --container-color: #f1f5f6;
+    --bg-color: var(--white-color);
+    --container-color: var(--very-light-color);
     --text-color: #1e1e1e;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--bg-color);
+    width: 100%;
+}
+.dark {
+    --bg-color: var(--very-dark-grey-color);
+    --container-color: var(--dark-grey-color);
+    --text-color: var(--white-color);
+    background-color: var(--bg-color);
+}
+
+.body_container {
+    margin-bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    gap: 80px;
+    width: 100%;
+}
+button {
+    border-radius: 12px;
+    border: none;
+    color: var(--white-color);
+    background: var(--primary-color);
+    padding: 15px;
+    box-shadow: var(--container-shadow)
+}
+button:hover {
+    border-radius: 12px;
+    color: var(--white-color);
+    background: var(--dark-blue-color);
 }
 .shadowBottom {
     box-shadow: var(--bottom-shadow)
@@ -46,21 +78,9 @@ html {
 .shadowUp {
     box-shadow: var(--upper-shadow)
 }
-.dark {
-    --bg-color: #1e1e1e;
-    --container-color: #262626;
-    --text-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-}
 
-.module {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 960px;
+@media only screen and (max-width: 750px) {
+    .App {
+        padding-bottom: 40px;
+    }
 }

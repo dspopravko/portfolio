@@ -23,28 +23,28 @@ export const Contact = () => {
                 <div className={s.contacts}>
                     <div className={s.unit}>
                         <div>
-                            <FontAwesomeIcon size={"2x"} icon={faLocationDot} color={'#20ae44'}/></div>
+                            <FontAwesomeIcon size={"2x"} icon={faLocationDot} color={'#416CA6'}/></div>
                         <div>
                             Georgia, Tbilisi. <br/> Ready for relocation.
                         </div>
                     </div>
                     <div className={s.unit}>
                         <div>
-                            <FontAwesomeIcon size={"2x"} icon={faPhone} color={'#20ae44'}/></div>
+                            <FontAwesomeIcon size={"2x"} icon={faPhone} color={'#416CA6'}/></div>
                         <div>
                             <a href="tel:+995595146507">+995 595 146 507</a>
                         </div>
                     </div>
                     <div className={s.unit}>
                         <div>
-                            <FontAwesomeIcon size={"2x"} icon={faEnvelope} color={'#20ae44'}/></div>
+                            <FontAwesomeIcon size={"2x"} icon={faEnvelope} color={'#416CA6'}/></div>
                         <div>
                             <a href="mailto:dspopravko@gmail.com">dspopravko@gmail.com</a>
                         </div>
                     </div>
                     <div className={s.unit}>
                         <div>
-                            <FontAwesomeIcon size={"2x"} icon={faTelegram} color={'#20ae44'}/></div>
+                            <FontAwesomeIcon size={"2x"} icon={faTelegram} color={'#416CA6'}/></div>
                         <div>
                             <a target={'_blank'} href="https://telegram.me/dspopravko">Telegram</a>
                         </div>

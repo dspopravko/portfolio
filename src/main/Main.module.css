@@ -1,54 +1,70 @@
 .wrapper {
+    user-select: none;
+    min-height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
-    /*min-height: 100vh;*/
-    min-height: 660px;
     width: 100%;
     background-color: var(--bg-color);
-    flex-wrap: wrap;
-    gap: 40px
 }
-.hello {
+
+.btnContainer {
     user-select: none;
+    margin-top: 20px;
 }
-.block1 {
-    color: var(--text-color);
-    background-color: var(--container-color);
-    border: 2px solid red;
-    min-width: 340px;
-    height: 450px;
+.wrapper div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.block2 {
-    color: var(--text-color);
-    background-color: var(--container-color);
-    border: 2px solid green;
-    min-width: 340px;
-    height: 450px;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.block1 {
+    padding-top: 50px;
+    color: var(--text-color);
+    min-width: 300px;
+    padding-left: 16px;
+}
+
+.block2 {
+    color: var(--text-color);
+    min-width: 340px;
+    flex-direction: row;
+}
+
 .links {
-    display: flex;
-    flex-direction: column;
+    fill: var(--primary-color);
+    position: absolute;
+    left: 12px;
     gap: 20px;
     opacity: 0.8;
 }
+
 .blob {
     width: 200px;
     fill: var(--primary-color);
 }
+
 .profilePicture {
     width: 170px;
-    transition: ease-in-out .6s;
 }
-.profilePicture:hover {
-    width: 172px;
+
+@media only screen and (max-width: 800px) {
+    .links {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        top: 0;
+        gap: 0
+    }
+
+    .block2, .block1 {
+        height: 300px;
+    }
 }

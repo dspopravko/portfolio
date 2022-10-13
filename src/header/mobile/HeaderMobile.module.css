@@ -3,7 +3,7 @@
     bottom: 50px;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 190px;
     background-color: var(--bg-color);
     z-index: 1;
     transition: ease 0.5s;
@@ -19,6 +19,7 @@
     transition: ease 0.5s;
 }
 .header > * {
+    width: 100%;
     height: 100%;
 }
 .mobileMenu {
@@ -29,10 +30,10 @@
     width: 100%;
     background-color: var(--bg-color);
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 28px;
     z-index: 2;
 }
 .btnWrapper {
@@ -42,9 +43,12 @@
 .title {
     color: var(--text-color);
     font-weight: 600;
+    font-size: 1rem;
 }
 .menuBtn {
     color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
     border: none;
     padding: 5px;
     border-radius: 10px;

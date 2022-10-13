@@ -13,7 +13,7 @@ export const HeaderDesktop = () => {
                 className={s.menuBtn}>
                 Menu
             </button>
-            <div className={y > 50 ? s.header + ' shadowBottom' : s.header}>
+            <div className={y > 50 ? `${s.header} ${s.small} shadowBottom` : s.header}>
                 <DarkModeBtn/>
                 <Navbar/>
             </div>

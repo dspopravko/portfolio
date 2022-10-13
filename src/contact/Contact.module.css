@@ -3,8 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
-    min-height: 40vh;
     width: 100%;
     background-color: var(--bg-color);
     flex-wrap: wrap;
@@ -13,51 +11,35 @@
 .title {
     color: var(--text-color);
     text-align: center;
-    border: 2px solid red;
     width: 100%;
 }
 .container {
     color: var(--text-color);
     min-height: 100px;
     width: 100%;
-    border: 2px solid springgreen;
     padding: 15px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-content: space-evenly;
     align-items: stretch;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.container button {
-    border-radius: 3px;
-    border: none;
-    color: var(--white-color);
-    background: var(--primary-color);
-    padding: 15px;
-}
-.container button:hover {
-    border-radius: 3px;
-    color: var(--white-color);
-    background: var(--green50-color);
-}
-.contacts {
-    min-width: 350px;
-    border: #ff6124 2px solid;
+    gap: 30px;
+    flex-wrap: wrap-reverse;
 }
 .form {
     background-color: var(--container-color);
-    min-width: 320px;
-    border: 2px solid crimson;
-    padding: 5px;
+    min-width: 340px;
+    padding: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    box-shadow: var(--container-shadow)
 }
 .form input, textarea {
     color: var(--text-color);
-    border: 2px solid var(--black10-color);
-    border-radius: 5px;
+    border: 2px solid var(--light-gray-color);
+    border-radius: 12px;
     background-color: var(--bg-color);
     font-size: 1.1rem;
     min-height: 40px;
@@ -68,16 +50,34 @@
     height: 140px;
 }
 .contacts {
+    padding: 15px;
+    min-width: 350px;
     display: flex;
+    gap: 20px;
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 20px
-}
-.contacts > * {
-    min-height: 40px;
+    justify-content: space-around;
 }
 .unit {
+    height: 60px;
     display: flex;
     align-items: center;
-    gap: 16px
+    gap: 16px;
+}
+.unit div:first-child {
+    display: flex;
+    justify-content: center;
+    width: 44px;
+}
+.unit div a {
+    user-select: none;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.unit div a:active {
+    text-decoration: none;
+    color: var(--dark-blue-color);
+}
+.unit div a:visited {
+    text-decoration: none;
+    color: var(--blue-color);
 }

@@ -3,17 +3,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--container-color);
     flex-wrap: wrap;
     gap: 40px;
 }
 .container {
     position: relative;
-    min-height: 200px;
+    min-height: 160px;
     width: 100%;
-    border: 2px solid springgreen;
     display: flex;
     justify-content: center;
     align-content: space-evenly;
@@ -24,7 +22,6 @@
 .link {
     color: var(--text-color);
     background-color: var(--container-color);
-    border: 2px solid #ff6124;
     width: 80px;
     height: 80px;
     display: flex;
@@ -32,6 +29,19 @@
     justify-content: center;
     align-items: center;
 }
-.icon {
-    width: 50px;
+
+@media only screen and (max-width: 750px) {
+    .container {
+        gap: 10%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        gap: 4%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .container {
+        gap: 1%;
+    }
 }

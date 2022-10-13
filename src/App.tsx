@@ -6,11 +6,12 @@ import {Skills} from "./skills/Skills";
 import {MyProjects} from "./myprojects/MyProjects";
 import {Remote} from "./remote/Remote";
 import {Contact} from "./contact/Contact";
-import {Header} from "./header/Header";
 import useWindowDimensions from "./useWindowDimensions";
 import {About} from "./about/About";
 import useScrollDimensions from "./useScrollDimensions";
 import {Footer} from "./footer/Footer";
+import {HeaderMobile} from "./header/mobile/HeaderMobile";
+import {HeaderDesktop} from "./header/desktop/HeaderDesktop";
 
 function App() {
     const [dark, setDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -26,9 +27,9 @@ function App() {
         }}>
             <div className={dark ? "App dark" : "App"}>
                 <header className="App-header">
-                    <Header/>
+                    {width < 750? <HeaderMobile/> : <HeaderDesktop/>}
                 </header>
-                <div className={dark ? "module dark" : "module"}>
+                <div className={"body_container"}>
                     <Main/>
                     <About/>
                     <Skills/>

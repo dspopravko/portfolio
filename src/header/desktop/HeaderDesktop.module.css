@@ -7,6 +7,10 @@
     background-color: var(--bg-color);
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
+}
+.small {
+    height: 60px;
 }
 .header > * {
     height: 100%;
