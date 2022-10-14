@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 660px;
     width: 100%;
     background-color: var(--bg-color);
     flex-wrap: wrap;
@@ -41,7 +40,7 @@
     box-shadow: var(--container-shadow)
 }
 .project p {
-    text-align: center;
+    text-align: justify;
 }
 .logoWrapper {
     width: 300px;

@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './About.module.css'
 import profilePictureRmBg from "./../assets/profile/profilePicture2RmBg.png"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faDigging} from "@fortawesome/free-solid-svg-icons";
 
 export const About = () => {
     return (
@@ -24,7 +26,11 @@ export const About = () => {
                     <button>Download CV</button>
                     </div>
                 </div>
-            <div className={s.experience}>f</div>
+            <div className={s.experience}>
+                <FontAwesomeIcon size={'8x'} icon={faDigging} color={"var(--primary-color)"}/>
+                <br/>
+                <h3 style={{textAlign: "center"}}>This block is under<br/>construction right now</h3>
+            </div>
             </div>
         </div>
 )

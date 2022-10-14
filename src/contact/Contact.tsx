@@ -8,7 +8,7 @@ export const Contact = () => {
 
     const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        alert("И тут ничего не происходит!")
+        alert("💪💪💪")
     }
     return (
         <div className={s.wrapper} id={"contact"}>

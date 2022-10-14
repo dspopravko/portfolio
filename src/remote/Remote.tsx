@@ -4,7 +4,7 @@ import s from './Remote.module.css'
 export const Remote = () => {
     const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        alert("Пока ничего не происходит!")
+        alert("💪💪💪")
     }
     return (
         <div className={s.wrapper} id={'remote'}>

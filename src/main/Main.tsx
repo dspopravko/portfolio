@@ -16,12 +16,17 @@ export const Main = () => {
                 </a>
             </div>
             <div className={s.block1}>
-                <h1>Hi, a'm Demid</h1>
+                <h1>Hi, I'm Demid</h1>
                 <h2>Frontend developer</h2>
                 <h3>Experienced in UI development<br/>
                     using React / Redux / TypeScript.</h3>
                 <div className={s.btnContainer}>
-                    <button onClick={() => alert("💪💪💪")}>Contact me</button>
+                    <button     onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href="#remote";
+                    }}
+                    >
+                        Contact me</button>
                 </div>
             </div>
             <div className={s.block2}>
