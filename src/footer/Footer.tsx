@@ -6,6 +6,7 @@ import { faFacebook, faLinkedin, faInstagram, faGithub } from "@fortawesome/free
 export const Footer = () => {
     return (
         <div className={s.wrapper}>
+                <h2>Demid Popravko</h2>
             <div className={s.container}>
                 <div className={s.link}>
                     <a target={'_blank'} href={'https://github.com/dspopravko'}>
@@ -28,6 +29,7 @@ export const Footer = () => {
                     </a>
                 </div>
             </div>
+                <p>© 2022 All rights reserved ✌</p>
         </div>
     )
 }
