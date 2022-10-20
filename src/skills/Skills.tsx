@@ -3,7 +3,7 @@ import s from './Skills.module.css'
 
 export const Skills = () => {
     return (
-        <div className={s.wrapper} id={'skills'}>
+        <section className={s.wrapper} id={'skills'}>
             <div className={s.title}><h2>These are my skills</h2></div>
             <div className={s.container}>
                 <div className={s.skill}>
@@ -49,6 +49,6 @@ export const Skills = () => {
                     <p>Implemented Redux for state management of app as BLL. Created reducers for immutable state modification.</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

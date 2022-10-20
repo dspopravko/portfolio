@@ -6,7 +6,7 @@ import {faDigging} from "@fortawesome/free-solid-svg-icons";
 
 export const About = () => {
     return (
-        <div className={s.wrapper} id={'about'}>
+        <section className={s.wrapper} id={'about'}>
             <div className={s.title}><h2>About me</h2></div>
             <div className={s.container}>
                 <div className={s.picture}>
@@ -32,6 +32,6 @@ export const About = () => {
                 <h3 style={{textAlign: "center"}}>This block is under<br/>construction right now</h3>
             </div>
             </div>
-        </div>
+        </section>
 )
 }

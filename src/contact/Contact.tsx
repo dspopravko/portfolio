@@ -11,7 +11,7 @@ export const Contact = () => {
         alert("💪💪💪")
     }
     return (
-        <div className={s.wrapper} id={"contact"}>
+        <section className={s.wrapper} id={"contact"}>
             <div className={s.title}><h2>Contact me</h2></div>
             <div className={s.container}>
                 <form className={s.form}>
@@ -53,6 +53,6 @@ export const Contact = () => {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }

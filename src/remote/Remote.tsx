@@ -7,11 +7,11 @@ export const Remote = () => {
         alert("💪💪💪")
     }
     return (
-        <div className={s.wrapper} id={'remote'}>
+        <section className={s.wrapper} id={'remote'}>
             <div className={s.title}><h2>I am available for remote work</h2></div>
             <div className={s.container}>
                 <button onClick={(e) => onClickHandler(e)}>Hire me!</button>
             </div>
-        </div>
+        </section>
     )
 }

@@ -6,7 +6,7 @@ import {ThemeContext} from "../Context";
 export const MyProjects = () => {
     const {projects} = useContext(ThemeContext);
     return (
-        <div className={s.wrapper} id={"projects"}>
+        <section className={s.wrapper} id={"projects"}>
             <div className={s.title}><h2>My Projects</h2></div>
             <div className={s.container}>
                 {projects.map((p, index) => <Project
@@ -18,6 +18,6 @@ export const MyProjects = () => {
                     description={p.description}/>)
                 }
             </div>
-        </div>
+        </section>
     )
 }
