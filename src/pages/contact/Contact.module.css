@@ -26,9 +26,13 @@
     gap: 30px;
     flex-wrap: wrap-reverse;
 }
+.container > * {
+    flex: auto
+}
 .form {
+    min-width: 240px;
     background-color: var(--container-color);
-    min-width: 340px;
+    max-width: 340px;
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -55,7 +59,7 @@
 }
 .contacts {
     padding: 15px;
-    min-width: 350px;
+    max-width: 350px;
     display: flex;
     gap: 20px;
     flex-direction: column;

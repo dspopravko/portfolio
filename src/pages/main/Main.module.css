@@ -22,8 +22,12 @@
 .block1 {
     padding-top: 50px;
     color: var(--text-color);
-    min-width: 300px;
+    width: 100%;
+    max-width: 320px;
     padding-left: 16px;
+}
+.block1 h3{
+text-align: center;
 }
 
 .block2 {

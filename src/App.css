@@ -17,11 +17,12 @@
     --primary-color: var(--blue-color);
     --destructive-color: var(--orange-color);
     --text-on-light-bg-color: var(--black-color);
-    --text-on-dark-bg-color: var(--white-color)
+    --text-on-dark-bg-color: var(--white-color);
+    --font: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
 }
 
 * {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
+    font-family: var(--font);
     transition: ease 0.2s;
 }
 html {
