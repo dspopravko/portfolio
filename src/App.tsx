@@ -55,7 +55,7 @@ function App() {
                     {width < 750? <HeaderMobile/> : <HeaderDesktop/>}
                 </header>
                 <div className={"body_container"}>
-                    <Main/>
+                    <Main picture={profilePictureRmBg}/>
                     <About/>
                     <Skills/>
                     <MyProjects/>
