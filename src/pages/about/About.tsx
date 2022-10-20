@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from './About.module.css'
-import profilePictureRmBg from "./../assets/profile/profilePicture2RmBg.png"
+import profilePictureRmBg from "../../assets/profile/profilePicture2RmBg.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDigging} from "@fortawesome/free-solid-svg-icons";
+import {ThemeContext} from "../../utilities/Context";
+import {about} from "../../lang/lang";
 
 export const About = () => {
+    const {locale} = useContext(ThemeContext);
+    const l = about[locale]
+
     return (
         <section className={s.wrapper} id={'about'}>
-            <div className={s.title}><h2>About me</h2></div>
+            <div className={s.title}><h2>{l.title}</h2></div>
             <div className={s.container}>
                 <div className={s.picture}>
                     <div
@@ -20,10 +25,10 @@ export const About = () => {
                     </div>
                 </div>
                 <div className={s.about}>
-                    I am currently in Tbilisi, Georgia.<br/>
-                    I have always had a passion for computers.<br/>While studying at the university, I worked as a technician in the IT department.<br/>
+                    {l.description_1}<br/>
+                    {l.description_2}
                     <div className={s.btnContainer}>
-                    <button>Download CV</button>
+                    <button>{l.button}</button>
                     </div>
                 </div>
             <div className={s.experience}>

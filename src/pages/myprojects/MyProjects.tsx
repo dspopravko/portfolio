@@ -1,15 +1,18 @@
 import React, {useContext} from 'react';
 import s from './MyProjects.module.css'
 import {Project} from "./Project";
-import {ThemeContext} from "../Context";
+import {ThemeContext} from "../../utilities/Context";
+import {projects} from "../../lang/lang";
 
 export const MyProjects = () => {
-    const {projects} = useContext(ThemeContext);
+    const {projectsArray, locale} = useContext(ThemeContext);
+    const l = projects[locale]
+
     return (
         <section className={s.wrapper} id={"projects"}>
-            <div className={s.title}><h2>My Projects</h2></div>
+            <div className={s.title}><h2>{l.title}</h2></div>
             <div className={s.container}>
-                {projects.map((p, index) => <Project
+                {projectsArray.map((p, index) => <Project
                     key={index}
                     title={p.title}
                     githubLink={p.githubLink}

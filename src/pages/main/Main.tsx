@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from './Main.module.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {ThemeContext} from "../../utilities/Context";
+import {mainLang} from "../../lang/lang";
 
 export const Main = ({picture}: {picture: string}) => {
+    const {locale} = useContext(ThemeContext);
+    const l = mainLang[locale]
     return (
         <section className={s.wrapper} id={'home'}>
             <div className={s.links}>
@@ -15,10 +19,9 @@ export const Main = ({picture}: {picture: string}) => {
                 </a>
             </div>
             <div className={s.block1}>
-                <h1>Hi, I'm Demid</h1>
-                <h2>Frontend developer</h2>
-                <h3>Experienced in UI development<br/>
-                    using React / Redux / TypeScript.</h3>
+                <h1>{l.name}</h1>
+                <h2>{l.job}</h2>
+                <h3>{l.description}</h3>
                 <div className={s.btnContainer}>
                     <button     onClick={(e) => {
                         e.preventDefault();

@@ -7,21 +7,28 @@ export type ProjectType = {
     coverLogo: string
     description: string
 }
-
+export enum localeT {
+    En = 'en',
+    Ru = 'ru',
+}
 type ThemeContextType = {
     y: number
     width: number
     height: number
     dark: boolean
-    projects: ProjectType[]
+    locale: localeT
+    projectsArray: ProjectType[]
     setDark: ((dark: boolean) => void)
+    setLocale: ((locale: localeT) => void)
 }
 const DefaultState = {
     y: 0,
     width: window.innerWidth,
     height: window.innerHeight,
     dark: false,
-    projects: [],
-    setDark: (dark: boolean) => {}
+    locale: localeT.En,
+    projectsArray: [],
+    setDark: (dark: boolean) => {},
+    setLocale: (locale: localeT) => {}
 }
 export const ThemeContext = createContext<ThemeContextType>(DefaultState)

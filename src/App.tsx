@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Main} from "./main/Main";
-import {ThemeContext} from "./Context";
-import {Skills} from "./skills/Skills";
-import {MyProjects} from "./myprojects/MyProjects";
-import {Remote} from "./remote/Remote";
-import {Contact} from "./contact/Contact";
-import useWindowDimensions from "./useWindowDimensions";
-import {About} from "./about/About";
-import useScrollDimensions from "./useScrollDimensions";
-import {Footer} from "./footer/Footer";
-import {HeaderMobile} from "./header/mobile/HeaderMobile";
-import {HeaderDesktop} from "./header/desktop/HeaderDesktop";
+import {Main} from "./pages/main/Main";
+import {localeT, ThemeContext} from "./utilities/Context";
+import {Skills} from "./pages/skills/Skills";
+import {MyProjects} from "./pages/myprojects/MyProjects";
+import {Remote} from "./pages/remote/Remote";
+import {Contact} from "./pages/contact/Contact";
+import useWindowDimensions from "./utilities/useWindowDimensions";
+import useScrollDimensions from "./utilities/useScrollDimensions";
+import {Footer} from "./components/footer/Footer";
+import {HeaderMobile} from "./components/header/mobile/HeaderMobile";
+import {HeaderDesktop} from "./components/header/desktop/HeaderDesktop";
 import counter from "./assets/counter.png"
 import profilePictureRmBg from "./assets/profile/profilePictureRmBg.png"
+import {About} from "./pages/about/About";
 
-const projects = [
+const projectsArray = [
     {
         title: "Social network",
         githubLink: "https://github.com/dspopravko/04-samurai-way",
@@ -39,6 +39,7 @@ const projects = [
 
 function App() {
     const [dark, setDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
+    const [locale, setLocale] = useState(localeT.En)
     const {height, width} = useWindowDimensions();
     const {y} = useScrollDimensions()
     return (
@@ -47,7 +48,9 @@ function App() {
             width,
             height,
             dark,
-            projects,
+            locale,
+            setLocale,
+            projectsArray,
             setDark
         }}>
             <div className={dark ? "App dark" : "App"}>

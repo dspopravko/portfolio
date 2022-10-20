@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from './Skills.module.css'
+import {ThemeContext} from "../../utilities/Context";
+import {skills} from "../../lang/lang";
 
 export const Skills = () => {
+    const {locale} = useContext(ThemeContext);
+    const l = skills[locale]
+
     return (
         <section className={s.wrapper} id={'skills'}>
-            <div className={s.title}><h2>These are my skills</h2></div>
+            <div className={s.title}><h2>{l.title}</h2></div>
             <div className={s.container}>
                 <div className={s.skill}>
                     <div className={s.logoWrapper}>
