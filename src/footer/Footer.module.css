@@ -7,6 +7,7 @@
     width: 100%;
     background-color: var(--container-color);
     flex-wrap: wrap;
+    padding-bottom: 24px;
 }
 .container {
     position: relative;
@@ -27,6 +28,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+p, h2 {
+    color: var(--text-color);
 }
 
 @media only screen and (max-width: 750px) {

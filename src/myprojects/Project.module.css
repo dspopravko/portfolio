@@ -1,8 +1,9 @@
 .project {
     color: var(--text-color);
     background-color: var(--container-color);
-    min-width: 300px;
-    max-width: 420px;
+    width: 100%;
+    min-width: 340px;
+    max-width: 460px;
     min-height: 280px;
     border-radius: 20px;
     padding: 20px;

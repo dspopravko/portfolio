@@ -2,7 +2,7 @@ import React from 'react';
 import s from "./Project.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import {faSitemap} from "@fortawesome/free-solid-svg-icons";
+import {faChalkboardUser} from "@fortawesome/free-solid-svg-icons";
 
 export type ProjectPropsType = {
     title: string
@@ -33,7 +33,7 @@ export const Project = ({
                     </div>
                     <div className={s.deployment}>
                         <a target={'_blank'} href={deployLink}>
-                            <FontAwesomeIcon size={"3x"} icon={faSitemap} color={'#FFF'}/>
+                            <FontAwesomeIcon size={"3x"} icon={faChalkboardUser} color={'#FFF'}/>
                             <br/>
                             See deployment
                         </a>

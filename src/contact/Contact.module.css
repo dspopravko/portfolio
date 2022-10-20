@@ -49,6 +49,10 @@
     resize: none;
     height: 140px;
 }
+.form input::placeholder, textarea::placeholder {
+    color: var(--text-color);
+    opacity: 0.65;
+}
 .contacts {
     padding: 15px;
     min-width: 350px;
@@ -69,7 +73,6 @@
     width: 44px;
 }
 .unit div a {
-    user-select: none;
     text-decoration: none;
     color: var(--text-color);
 }

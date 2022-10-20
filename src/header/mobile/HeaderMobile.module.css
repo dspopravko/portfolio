@@ -41,6 +41,7 @@
     flex-direction: row-reverse;
 }
 .title {
+    cursor: pointer;
     color: var(--text-color);
     font-weight: 600;
     font-size: 1rem;
