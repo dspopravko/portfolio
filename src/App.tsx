@@ -12,6 +12,8 @@ import useScrollDimensions from "./useScrollDimensions";
 import {Footer} from "./footer/Footer";
 import {HeaderMobile} from "./header/mobile/HeaderMobile";
 import {HeaderDesktop} from "./header/desktop/HeaderDesktop";
+import counter from "./assets/counter.png"
+import profilePictureRmBg from "./assets/profile/profilePictureRmBg.png"
 
 const projects = [
     {
@@ -22,15 +24,15 @@ const projects = [
         description: "Social Network is an online platform that allows people to create an account and interact with other people on the website. Users can build there virtual world on the site, make friends and share their thoughts and ideas by writing a post."
     },    {
         title: "Todolist",
-        githubLink: "https://github.com/dspopravko/04-samurai-way",
+        githubLink: "https://github.com/dspopravko/03-todolist",
         deployLink: 'https://github.com/dspopravko',
         coverLogo: "https://vuejsexamples.com/content/images/2019/07/priority.png",
         description: "Todo List is an online platform for organizing your personal or work tasks which can help you to increase the productivity, prioritise tasks, manage tasks effectively and improve time management."
     },    {
         title: "Counter",
-        githubLink: "https://github.com/dspopravko/04-samurai-way",
-        deployLink: 'https://github.com/dspopravko',
-        coverLogo: "https://img.stackshare.io/service/4906/default_db6159e1ae3d61e909d2c05d5a2c6990bdc6088f.png",
+        githubLink: "https://github.com/dspopravko/10-incrementor",
+        deployLink: 'https://dspopravko.github.io/10-incrementor/',
+        coverLogo: counter,
         description: "Counter is a test project which (to tell the truth) doesn't have a lot of practical use. It allows to do some settings which influence on the way how the counter works."
     },
 ]
