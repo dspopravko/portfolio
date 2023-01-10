@@ -1,7 +1,6 @@
 {
-  "name": "my-app",
+  "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://dspopravko.github.io/12-portfolio",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -27,8 +26,6 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
