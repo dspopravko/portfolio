@@ -47,7 +47,8 @@
     background-color: var(--bg-color);
     font-size: 1.1rem;
     min-height: 40px;
-    padding: 12px;
+    padding: 12px 44px 12px 12px;
+    width: 100%;
 }
 .form textarea {
     resize: none;
@@ -87,4 +88,10 @@
 .unit div a:visited {
     text-decoration: none;
     color: var(--blue-color);
+}
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
 }

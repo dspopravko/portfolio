@@ -1,0 +1,25 @@
+.icon {
+    color: var(--destructive-color);
+    position: absolute;
+    font-size: 22px;
+    top: 15px;
+    right: 15px;
+}
+.icon:hover {
+    color: var(--text-color);
+}
+.fieldError {
+    position: absolute;
+    max-width: 180px;
+    top: 4px;
+    right: 46px;
+    border-radius: 8px;
+    background-color: var(--text-color);
+    box-shadow: var(--bottom-shadow);
+}
+.fieldError p {
+    font-size: 14px;
+    padding: 3px 10px 0 10px;
+    text-align: right;
+    color: var(--bg-color);
+}

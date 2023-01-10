@@ -1,12 +1,12 @@
 export const contact = {
     en: {
         title: 'Contact me',
-        location: 'Georgia, Tbilisi. Ready for relocation.',
+        location: `Georgia, Tbilisi.\nReady for relocation.`,
         form: {
             name: 'Name',
             email: 'Email',
             message: 'Type your message',
-            button: 'Send'
+            button: ['Send', '', 'Mail was sent', 'Something went wrong...']
         }
     },
     ru: {
@@ -16,7 +16,8 @@ export const contact = {
             name: 'Ваше имя',
             email: 'E-mail',
             message: 'Ваше сообщение',
-            button: 'Отправить'
+            button: ['Отправить', '', 'Успешно отправлено', 'Что-то пошло не так...']
         }
     }
 };
+// statuses = 'idle' | 'pending' | 'success' | 'error'

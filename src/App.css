@@ -9,6 +9,7 @@
     --blue-color: #5095BF;
     --dark-blue-color: #416CA6;
     --orange-color: #D98C5F;
+    --green-color: #5fbf50;
     --container-shadow:  0 0px 4px rgba(0, 0, 0, .15);
     --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, .35);
     --upper-shadow: 0 -4px 4px rgba(0, 0, 0, .04);
@@ -16,6 +17,7 @@
     /* App Theme */
     --primary-color: var(--blue-color);
     --destructive-color: var(--orange-color);
+    --success-color: var(--green-color);
     --text-on-light-bg-color: var(--black-color);
     --text-on-dark-bg-color: var(--white-color);
     --font: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
@@ -68,6 +70,12 @@ button {
     padding: 15px;
     box-shadow: var(--container-shadow)
 }
+button:disabled {
+    background-color: var(--bg-color);
+}
+button:disabled:hover {
+    background-color: var(--bg-color);
+}
 button:hover {
     border-radius: 12px;
     color: var(--white-color);
@@ -78,6 +86,12 @@ button:hover {
 }
 .shadowUp {
     box-shadow: var(--upper-shadow)
+}
+.hidden {
+    opacity: 0;
+}
+.cursor {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 750px) {
