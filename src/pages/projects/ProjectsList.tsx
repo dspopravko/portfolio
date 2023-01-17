@@ -27,8 +27,9 @@ export const ProjectsList = () => {
         <h2>{l.title}</h2>
       </div>
       <div className={s.container}>
-        {projects.map((item) => (
+        {projects.map((item, index) => (
           <Project
+            index={index}
             key={item.id}
             handleOpen={handleOpenPopup}
             project={item}

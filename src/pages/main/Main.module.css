@@ -8,41 +8,49 @@
   width: 100%;
   background-color: var(--bg-color);
   transition: var(--transition);
+  padding: 0 20px;
 }
 
 .btnContainer {
   user-select: none;
   margin-top: 20px;
 }
-.wrapper div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.block1 {
+
+.welcome {
   padding-top: 50px;
   color: var(--text-color);
   width: 100%;
-  max-width: 320px;
   padding-left: 16px;
+  text-align: left;
 }
-.block1 h3 {
-  text-align: center;
+.welcome > * {
+  text-align: left;
+}
+.welcome h1 {
+  font-family: var(--font-monospace);
+  font-size: 1rem;
+  margin-bottom: 14px;
+  color: var(--primary-color)
+}
+.welcome h3 {
+  margin-left: -3px;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.welcome h4 {
+  opacity: 0.4;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.welcome h5 {
+  font-weight: 400;
+  font-size: 1.25rem;
 }
 
-.block2 {
+.photo {
   color: var(--text-color);
   min-width: 340px;
   flex-direction: row;
-}
-
-.links {
-  fill: var(--primary-color);
-  position: absolute;
-  left: 12px;
-  gap: 20px;
-  opacity: 0.8;
 }
 
 .blob {
@@ -62,16 +70,12 @@
 
 @media only screen and (max-width: 750px) {
   .wrapper {
+    margin-top: 18px;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
     min-height: auto;
     top: 0;
     gap: 0;
-  }
-
-  .block2,
-  .block1 {
-    height: 300px;
   }
 }

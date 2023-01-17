@@ -10,6 +10,7 @@
 .line {
   width: 100%;
   height: 1px;
+  margin-bottom: 8px;
   background: var(--destructive-color);
 }
 .active {

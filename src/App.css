@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Calibre';
+  src: local('Calibre Regular'), local('Calibre-Regular'),
+  url('./../src/assets/fonts/Calibre-Regular.woff2') format('woff2'),
+  url('./../src/assets/fonts/Calibre-Regular.woff') format('woff'),
+  url('./../src/assets/fonts/Calibre-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: local('Calibre Bold'), local('Calibre-Bold'),
+  url('./../src/assets/fonts/Calibre-Bold.woff2') format('woff2'),
+  url('./../src/assets/fonts/Calibre-Bold.woff') format('woff'),
+  url('./../src/assets/fonts/Calibre-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   /* Palette */
   --white-color: #fff;
@@ -13,7 +33,7 @@
   --container-shadow: 0 0px 4px rgba(0, 0, 0, 0.15);
   --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
   --upper-shadow: 0 -4px 4px rgba(0, 0, 0, 0.04);
-  --active-shadow: 0 0px 5px rgb(80, 149, 191);
+  --active-shadow: 0 0px 8px rgb(80, 149, 191);
   --transition: ease 0.2s;
 
   /* App Theme */
@@ -22,8 +42,8 @@
   --success-color: var(--green-color);
   --text-on-light-bg-color: var(--black-color);
   --text-on-dark-bg-color: var(--white-color);
-  --font: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab,
-    droid serif, segoe ui, system-ui, Arial, sans-serif;
+  --font: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --font-monospace: "Source Code Pro", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
 
 * {
@@ -62,7 +82,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 960px;
+  max-width: 1000px;
   gap: 80px;
   width: 100%;
 }

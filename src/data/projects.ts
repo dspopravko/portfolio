@@ -1,7 +1,7 @@
-import typingapp from '../assets/typingapp.png'
-import cards from '../assets/cards.png'
-import todolist from '../assets/todolist.png'
-import socialnetwork from '../assets/socialnetwork.png'
+import typingapp from '../assets/projects/typingapp.png'
+import cards from '../assets/projects/cards.png'
+import todolist from '../assets/projects/todolist.png'
+import socialnetwork from '../assets/projects/socialnetwork.png'
 
 export type ProjectType = {
   id: string
@@ -17,6 +17,7 @@ export type ProjectType = {
   coverLogo: string
   descriptionShort: string
   descriptionLong: string
+  color: string
 }
 
 export const technologies = [
@@ -56,6 +57,7 @@ export const projects: ProjectType[] = [
       'Cards is full-fledged frontend app, developed in a team, with full authentication cycle. Cards use spaced repetition technique for you to quickly memorize things.',
     descriptionLong:
       'Cards is full-fledged frontend app, developed in a team, with full authentication cycle. Cards use spaced repetition technique for you to quickly memorize things. In the app, you can create packs of cards, fill them with cards with text or pictures, learn them, as well as search and study packs of other users.',
+    color: '#219ebc',
   },
   {
     id: '2',
@@ -77,6 +79,7 @@ export const projects: ProjectType[] = [
       'Built using React framework, Material UI and Redux. To ensure proper functionality and stability implemented unit-test and snapshot tests.',
     descriptionLong:
       'Built using React framework, Material UI and Redux. To ensure proper functionality and stability implemented unit-test and snapshot tests. It includes features such as authentication, CRUD operations for todolists and tasks. Unit-tests and screenshot tests are crucial in frontend projects to ensure that the implemented features are working correctly, and that there are no visual regression issues.',
+    color: '#06d6a0',
   },
   {
     id: '3',
@@ -93,29 +96,32 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/dspopravko/04-samurai-way',
     deployLink: 'https://github.com/dspopravko',
     coverLogo: socialnetwork,
-    technologies: ['React', 'Redux', 'Redux Thunk', 'Storybook', 'Unit-tests','Formik'],
+    technologies: ['React', 'Redux', 'Redux Thunk', 'Storybook', 'Unit-tests', 'Formik'],
     descriptionShort:
       'Social Network is an rather complex online platform, with many pages, redirection and state managing.',
     descriptionLong:
       'Social Network is an rather complex online platform, with many pages, redirection and state managing. This app was written in react class components.',
+    color: '#ffd166',
   },
   {
     id: '4',
     title: 'Typing App',
     projectType: 'Self Project',
-    goals: 'The idea for this project came to me on my own as I decided to learn touch typing and wanted to have my own learning app. In other applications, I lacked support for different keyboard layouts, and displaying error statistics, so these are the two main features that I wanted to implement.',
-    stack: 'Since I was creating an app in parallel with education, I decided to choose a state manager with which I am already familiar in order to solidify knowledge. To speed up development, I switched to Vite instead of the CRA.',
-    problems: 'The most difficult part was writing the logic for tracking the current position of the text cursor, along with displaying errors that were made, as well as maintaining the ability to correct them.',
-    final: 'I completed the features that I set for myself, but this project is more of a draft, for it to work, it needs a full-fledged backend with saving progress, routing, animations and much more. But I would love to go back and make it more usable and ready for production.',
+    goals:
+      'The idea for this project came to me on my own as I decided to learn touch typing and wanted to have my own learning app. In other applications, I lacked support for different keyboard layouts, and displaying error statistics, so these are the two main features that I wanted to implement.',
+    stack:
+      'Since I was creating an app in parallel with education, I decided to choose a state manager with which I am already familiar in order to solidify knowledge. To speed up development, I switched to Vite instead of the CRA.',
+    problems:
+      'The most difficult part was writing the logic for tracking the current position of the text cursor, along with displaying errors that were made, as well as maintaining the ability to correct them.',
+    final:
+      'I completed the features that I set for myself, but this project is more of a draft, for it to work, it needs a full-fledged backend with saving progress, routing, animations and much more. But I would love to go back and make it more usable and ready for production.',
     githubLink: 'https://github.com/dspopravko/typingapp',
     deployLink: 'https://dspopravko.github.io/typingapp/',
     coverLogo: typingapp,
-    technologies: [
-      'Vite',
-      'React',
-      'Redux',
-    ],
+    technologies: ['Vite', 'React', 'Redux'],
     descriptionShort: 'Typing app helps to learn touch typing. Build with redux, supports multiple layouts.',
-    descriptionLong: 'Typing app helps to learn touch typing. Build with redux, supports multiple layouts and display of keyboard miss statistics.',
+    descriptionLong:
+      'Typing app helps to learn touch typing. Build with redux, supports multiple layouts and display of keyboard miss statistics.',
+    color: '#ef476f',
   },
 ]

@@ -33,7 +33,11 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
           <button className={s.close} onClick={closePopup}>
             <FontAwesomeIcon icon={faXmark} />
           </button>
-          <motion.h2 className={s.titleH2} layoutId={'title' + project.id}>
+          <motion.h2
+            style={{color: project.color}}
+            className={s.titleH2}
+            layoutId={'title' + project.id}
+          >
             {project.title}
           </motion.h2>
           <motion.p layoutId={'description' + project.id}>{project.descriptionLong}</motion.p>
@@ -51,12 +55,8 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
               </div>
               <div>
                 <h5>Links</h5>
-                <a href={project.githubLink}>
-                  Github
-                </a>
-                <a href={project.deployLink}>
-                  Deployment
-                </a>
+                <a href={project.githubLink}>Github</a>
+                <a href={project.deployLink}>Deployment</a>
               </div>
             </div>
           </div>
@@ -101,7 +101,6 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
           </div>
           {children}
         </motion.div>
-
       </motion.div>
     </>
   )

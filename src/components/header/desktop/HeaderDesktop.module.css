@@ -19,3 +19,15 @@
 .menuBtn {
   display: none;
 }
+.links {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  gap: 20px;
+  fill: var(--primary-color);
+  position: fixed;
+  left: 10%;
+  bottom: 20px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
