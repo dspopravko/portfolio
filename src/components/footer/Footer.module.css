@@ -1,50 +1,51 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 210px;
-    width: 100%;
-    background-color: var(--container-color);
-    flex-wrap: wrap;
-    padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 210px;
+  width: 100%;
+  background-color: var(--container-color);
+  flex-wrap: wrap;
+  padding-bottom: 24px;
 }
 .container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: space-evenly;
-    align-items: stretch;
-    gap: 60px;
-    flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+  align-items: stretch;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 .link {
-    color: var(--text-color);
-    background-color: var(--container-color);
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  color: var(--text-color);
+  background-color: var(--container-color);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-p, h2 {
-    color: var(--text-color);
+p,
+h2 {
+  color: var(--text-color);
 }
 
 @media only screen and (max-width: 750px) {
-    .container {
-        gap: 10%;
-    }
+  .container {
+    gap: 10%;
+  }
 }
 @media only screen and (max-width: 600px) {
-    .container {
-        gap: 4%;
-    }
+  .container {
+    gap: 4%;
+  }
 }
 @media only screen and (max-width: 400px) {
-    .container {
-        gap: 1%;
-    }
+  .container {
+    gap: 1%;
+  }
 }

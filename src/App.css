@@ -1,101 +1,128 @@
 :root {
-    /* Palette */
-    --white-color: #fff;
-    --black-color: #000;
-    --very-light-color: #f1f5f6;
-    --light-gray-color: #e1e1e1;
-    --dark-grey-color: #262626;
-    --very-dark-grey-color: #1e1e1e;
-    --blue-color: #5095BF;
-    --dark-blue-color: #416CA6;
-    --orange-color: #D98C5F;
-    --green-color: #5fbf50;
-    --container-shadow:  0 0px 4px rgba(0, 0, 0, .15);
-    --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, .35);
-    --upper-shadow: 0 -4px 4px rgba(0, 0, 0, .04);
+  /* Palette */
+  --white-color: #fff;
+  --black-color: #000;
+  --very-light-color: #f1f5f6;
+  --light-gray-color: #e1e1e1;
+  --dark-grey-color: #262626;
+  --very-dark-grey-color: #1e1e1e;
+  --blue-color: #5095bf;
+  --dark-blue-color: #416ca6;
+  --orange-color: #d98c5f;
+  --green-color: #5fbf50;
+  --container-shadow: 0 0px 4px rgba(0, 0, 0, 0.15);
+  --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
+  --upper-shadow: 0 -4px 4px rgba(0, 0, 0, 0.04);
+  --active-shadow: 0 0px 5px rgb(80, 149, 191);
+  --transition: ease 0.2s;
 
-    /* App Theme */
-    --primary-color: var(--blue-color);
-    --destructive-color: var(--orange-color);
-    --success-color: var(--green-color);
-    --text-on-light-bg-color: var(--black-color);
-    --text-on-dark-bg-color: var(--white-color);
-    --font: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
+  /* App Theme */
+  --primary-color: var(--blue-color);
+  --destructive-color: var(--orange-color);
+  --success-color: var(--green-color);
+  --text-on-light-bg-color: var(--black-color);
+  --text-on-dark-bg-color: var(--white-color);
+  --font: 'Poppins', -apple-system, BlinkMacSystemFont, Roboto, roboto slab,
+    droid serif, segoe ui, system-ui, Arial, sans-serif;
 }
 
 * {
-    font-family: var(--font);
-    transition: ease 0.2s;
+  font-family: var(--font);
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .App-header {
-    width: 100%;
+  width: 100%;
 }
 .App {
-    --bg-color: var(--white-color);
-    --container-color: var(--very-light-color);
-    --text-color: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-    width: 100%;
+  --bg-color: var(--white-color);
+  --container-color: var(--very-light-color);
+  --text-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  width: 100%;
+  transition: var(--transition);
 }
 .dark {
-    --bg-color: var(--very-dark-grey-color);
-    --container-color: var(--dark-grey-color);
-    --text-color: var(--white-color);
-    background-color: var(--bg-color);
+  --bg-color: var(--very-dark-grey-color);
+  --container-color: var(--dark-grey-color);
+  --text-color: var(--white-color);
+  background-color: var(--bg-color);
 }
 
 .body_container {
-    margin-bottom: 26px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 960px;
-    gap: 80px;
-    width: 100%;
+  margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  gap: 80px;
+  width: 100%;
 }
-button {
-    border-radius: 12px;
-    border: none;
-    color: var(--white-color);
-    background: var(--primary-color);
-    padding: 15px;
-    box-shadow: var(--container-shadow)
+.body_container > * {
+  transition: var(--transition);
+}
+.button {
+  border-radius: 12px;
+  border: none;
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding: 15px;
+  box-shadow: var(--container-shadow);
+  cursor: pointer;
 }
 button:disabled {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 button:disabled:hover {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 button:hover {
-    border-radius: 12px;
-    color: var(--white-color);
-    background: var(--dark-blue-color);
+  border-radius: 12px;
+  color: var(--white-color);
+  background: var(--dark-blue-color);
 }
 .shadowBottom {
-    box-shadow: var(--bottom-shadow)
+  box-shadow: var(--bottom-shadow);
 }
 .shadowUp {
-    box-shadow: var(--upper-shadow)
+  box-shadow: var(--upper-shadow);
 }
 .hidden {
-    opacity: 0;
+  opacity: 0;
 }
 .cursor {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background-color: gray;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--destructive-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 @media only screen and (max-width: 750px) {
-    .App {
-        padding-bottom: 40px;
-    }
+  .App {
+    padding-bottom: 40px;
+  }
 }

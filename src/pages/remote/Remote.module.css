@@ -1,27 +1,27 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--bg-color);
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-color);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .title {
-    color: var(--text-color);
-    text-align: center;
-    width: 100%;
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
 }
 .container {
-    color: var(--text-color);
-    min-height: 100px;
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    align-items: stretch;
-    gap: 60px;
-    flex-wrap: wrap;
+  color: var(--text-color);
+  min-height: 100px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: stretch;
+  gap: 60px;
+  flex-wrap: wrap;
 }

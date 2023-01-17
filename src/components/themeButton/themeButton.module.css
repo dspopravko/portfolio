@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  transition: var(--transition);
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.03);
+}
+.light {
+  opacity: 0.5;
+  color: var(--orange-color);
+}
+
+.dark {
+  opacity: 0.5;
+  color: var(--blue-color);
+}

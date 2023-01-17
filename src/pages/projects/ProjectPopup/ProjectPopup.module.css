@@ -1,0 +1,138 @@
+.overlay {
+    z-index: 1;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    will-change: opacity;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.popupContent {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 42px;
+    border-radius: 12px;
+    background-color: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    height: calc(100% - 50px);
+    max-width: 800px;
+    overflow-y: auto;
+    outline: 5px solid var(--container-color);
+    position: relative;
+}
+.close {
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 14px;
+    right: 22px;
+    transition: var(--transition);
+}
+.close:hover {
+    background-color: transparent;
+    color: var(--destructive-color);
+    transform: scale(1.2);
+}
+.close:active {
+    background-color: transparent;
+    color: var(--destructive-color);
+    transform: scale(0.9);
+}
+.titleH2 {
+    font-size: 2.5rem;
+    align-self: flex-start;
+}
+.titleH3 {
+    padding: 0 20px;
+    color: var(--text-color);
+    font-size: 2rem;
+    align-self: flex-start;
+    transform: translateY(24px);
+}
+.infoBlock {
+    margin: 10px 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+.container {
+    width: 100%;
+    max-width: 400px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container div {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.container div h5 {
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+.container div p, a {
+    display: inline-block;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+}
+.container div a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+.container div a:hover {
+    transform: translateX(3px);
+}
+.imageContainer {
+    flex: 0.8;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+.image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.storyBlock {
+    border-radius: 8px;
+    padding: 20px 20px;
+    width: 100%;
+    background-color: var(--bg-color);
+    min-height: min-content;
+    display: flex;
+    flex-direction: row;
+    gap: 14px
+}
+.text {
+    flex: 1.2;
+}
+.text p{
+    white-space: pre-line
+}
+
+@media only screen and (max-width: 750px) {
+    .popupContent {
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 6px;
+        outline: none;
+    }
+}

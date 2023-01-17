@@ -1,64 +1,64 @@
 .headerOpen {
-    position: fixed;
-    bottom: 50px;
-    left: 0;
-    width: 100%;
-    height: 190px;
-    background-color: var(--bg-color);
-    z-index: 1;
-    transition: ease 0.5s;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  background-color: var(--bg-color);
+  z-index: 1;
+  transition: ease 0.5s;
 }
 .headerClose {
-    position: fixed;
-    bottom: -80px;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background-color: var(--bg-color);
-    z-index: 1;
-    transition: ease 0.5s;
+  position: fixed;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: var(--bg-color);
+  z-index: 1;
+  transition: ease 0.5s;
 }
 .header > * {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .mobileMenu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px;
-    z-index: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px;
+  z-index: 2;
+  transition: var(--transition);
 }
 .btnWrapper {
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .title {
-    cursor: pointer;
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
 }
 .menuBtn {
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 1rem;
-    border: none;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: var(--bg-color);
-    transition: ease 0.5s;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  transition: var(--transition);
 }
 
 @media only screen and (max-width: 750px) {
-    .mobileMenu {
-
-    }
+  .mobileMenu {
+  }
 }

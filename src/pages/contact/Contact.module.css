@@ -1,97 +1,99 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--bg-color);
-    flex-wrap: wrap;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-color);
+  flex-wrap: wrap;
+  gap: 40px;
 }
 .title {
-    color: var(--text-color);
-    text-align: center;
-    width: 100%;
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
 }
 .container {
-    color: var(--text-color);
-    min-height: 100px;
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: space-evenly;
-    align-items: stretch;
-    gap: 30px;
-    flex-wrap: wrap-reverse;
+  color: var(--text-color);
+  min-height: 100px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-evenly;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap-reverse;
 }
 .container > * {
-    flex: auto
+  flex: auto;
 }
 .form {
-    min-width: 240px;
-    background-color: var(--container-color);
-    max-width: 340px;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: var(--container-shadow)
+  min-width: 240px;
+  background-color: var(--container-color);
+  max-width: 340px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--container-shadow);
 }
-.form input, textarea {
-    color: var(--text-color);
-    border: 2px solid var(--light-gray-color);
-    border-radius: 12px;
-    background-color: var(--bg-color);
-    font-size: 1.1rem;
-    min-height: 40px;
-    padding: 12px 44px 12px 12px;
-    width: 100%;
+.form input,
+textarea {
+  color: var(--text-color);
+  border: 2px solid var(--light-gray-color);
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  font-size: 1.1rem;
+  min-height: 40px;
+  padding: 12px 44px 12px 12px;
+  width: 100%;
 }
 .form textarea {
-    resize: none;
-    height: 140px;
+  resize: none;
+  height: 140px;
 }
-.form input::placeholder, textarea::placeholder {
-    color: var(--text-color);
-    opacity: 0.65;
+.form input::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.65;
 }
 .contacts {
-    padding: 15px;
-    max-width: 350px;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    justify-content: space-around;
+  padding: 15px;
+  max-width: 350px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .unit {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .unit div:first-child {
-    display: flex;
-    justify-content: center;
-    width: 44px;
+  display: flex;
+  justify-content: center;
+  width: 44px;
 }
 .unit div a {
-    text-decoration: none;
-    color: var(--text-color);
+  text-decoration: none;
+  color: var(--text-color);
 }
 .unit div a:active {
-    text-decoration: none;
-    color: var(--dark-blue-color);
+  text-decoration: none;
+  color: var(--dark-blue-color);
 }
 .unit div a:visited {
-    text-decoration: none;
-    color: var(--blue-color);
+  text-decoration: none;
+  color: var(--blue-color);
 }
 .inputContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
 }

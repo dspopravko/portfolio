@@ -1,75 +1,77 @@
 .wrapper {
-    user-select: none;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--bg-color);
+  user-select: none;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-color);
+  transition: var(--transition);
 }
 
 .btnContainer {
-    user-select: none;
-    margin-top: 20px;
+  user-select: none;
+  margin-top: 20px;
 }
 .wrapper div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .block1 {
-    padding-top: 50px;
-    color: var(--text-color);
-    width: 100%;
-    max-width: 320px;
-    padding-left: 16px;
+  padding-top: 50px;
+  color: var(--text-color);
+  width: 100%;
+  max-width: 320px;
+  padding-left: 16px;
 }
-.block1 h3{
-text-align: center;
+.block1 h3 {
+  text-align: center;
 }
 
 .block2 {
-    color: var(--text-color);
-    min-width: 340px;
-    flex-direction: row;
+  color: var(--text-color);
+  min-width: 340px;
+  flex-direction: row;
 }
 
 .links {
-    fill: var(--primary-color);
-    position: absolute;
-    left: 12px;
-    gap: 20px;
-    opacity: 0.8;
+  fill: var(--primary-color);
+  position: absolute;
+  left: 12px;
+  gap: 20px;
+  opacity: 0.8;
 }
 
 .blob {
-    width: 200px;
-    fill: var(--primary-color);
+  width: 200px;
+  fill: var(--primary-color);
 }
 
 .profilePicture {
-    width: 170px;
+  width: 170px;
 }
 
 @media only screen and (max-width: 800px) {
-    .links {
-        display: none;
-    }
+  .links {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 750px) {
-    .wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: nowrap;
-        min-height: auto;
-        top: 0;
-        gap: 0
-    }
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    min-height: auto;
+    top: 0;
+    gap: 0;
+  }
 
-    .block2, .block1 {
-        height: 300px;
-    }
+  .block2,
+  .block1 {
+    height: 300px;
+  }
 }
