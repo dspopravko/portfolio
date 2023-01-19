@@ -16,7 +16,7 @@ export const HeaderMobile = () => {
       <header
         className={cx({
           [s.mobileMenu]: true,
-          shadowUp: y > 50 && open,
+          shadowUp: y > 50 && !open,
         })}
       >
         <div

@@ -47,9 +47,9 @@
 
 @media only screen and (max-width: 960px) {
   .container {
-    min-height: 950px;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center
   }
 
   .experience {
@@ -59,8 +59,16 @@
   .picture {
     color: var(--text-color);
   }
+}
 
-  .about {
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .container {
+    padding: 4px;
   }
 }
 

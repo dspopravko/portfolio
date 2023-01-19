@@ -49,3 +49,11 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+@media only screen and (max-width: 450px) {
+  .timeline {
+    display: none;
+  }
+  .item:after {
+    display: none;
+  }
+}

@@ -89,4 +89,18 @@
     top: 0;
     gap: 0;
   }
+  .welcome {
+    padding-top: 5vw;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .welcome > h1, h2 {
+    line-height: 0.9em;
+  }
+
+}
+@media only screen and (max-width: 400px) {
+  .photo {
+    min-width: 90%;
+  }
 }
