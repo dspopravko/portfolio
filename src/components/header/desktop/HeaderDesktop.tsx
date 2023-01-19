@@ -43,7 +43,7 @@ export const HeaderDesktop = () => {
         className={cx({
           [s.header]: true,
           [s.small]: y > 50,
-          shadowBottom: y < 50,
+          shadowBottom: y > 50,
         })}
       >
         <LanguageBtn />

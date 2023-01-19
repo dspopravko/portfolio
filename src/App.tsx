@@ -14,6 +14,7 @@ import { HeaderDesktop } from './components/header/desktop/HeaderDesktop'
 import profilePictureRmBg from './assets/profile/profilePictureRmBg.png'
 import { About } from './pages/about/About'
 import cx from 'classnames'
+import { AppLoader } from './components/appLoader/AppLoader'
 
 function App() {
   const [dark, setDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -38,16 +39,18 @@ function App() {
           App: !dark,
         })}
       >
-        {width < 750 ? <HeaderMobile /> : <HeaderDesktop />}
-        <div className={'body_container'}>
-          <Main picture={profilePictureRmBg} />
-          <About />
-          <SkillsList />
-          <ProjectsList />
-          <Remote />
-          <Contact />
-        </div>
-        <Footer />
+        <AppLoader>
+          {width < 750 ? <HeaderMobile /> : <HeaderDesktop />}
+          <div className={'body_container'}>
+            <Main picture={profilePictureRmBg} />
+            <About />
+            <SkillsList />
+            <ProjectsList />
+            <Remote />
+            <Contact />
+          </div>
+          <Footer />
+        </AppLoader>
       </div>
     </ThemeContext.Provider>
   )
