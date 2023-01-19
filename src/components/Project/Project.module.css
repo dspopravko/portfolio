@@ -6,7 +6,7 @@
     max-width: 460px;
     min-height: 280px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 20px 16px 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -15,6 +15,12 @@
     position: relative;
     cursor: pointer;
     flex: 0 0 40%;
+}
+
+.project p:last-child {
+    margin-top: 5px;
+    font-weight: 400;
+    color: var(--primary-color);
 }
 
 .tapContainer {
@@ -64,6 +70,7 @@
     display: flex;
     flex-direction: column;
 }
+
 
 @media only screen and (max-width: 930px) {
     .container {

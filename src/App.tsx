@@ -38,7 +38,7 @@ function App() {
           App: !dark,
         })}
       >
-        <header className="App-header">{width < 750 ? <HeaderMobile /> : <HeaderDesktop />}</header>
+        {width < 750 ? <HeaderMobile /> : <HeaderDesktop />}
         <div className={'body_container'}>
           <Main picture={profilePictureRmBg} />
           <About />

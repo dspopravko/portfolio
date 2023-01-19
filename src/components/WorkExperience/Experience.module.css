@@ -1,0 +1,51 @@
+.mainContainer {
+  width: 428px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch
+}
+.timelineContainer {
+  width: 60px;
+  position: relative;
+}
+.timeline {
+  position: absolute;
+  border-radius: 2px;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 240px;
+  width: 4px;
+  background: var(--primary-color);
+}
+.experienceContainer {
+  width: 368px;
+}
+.item {
+  margin: 35px 0;
+  position: relative;
+}
+.item:after {
+  position: absolute;
+  border-radius: 6px;
+  content: '';
+  top: 50%;
+  left: -30px;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  background-color: var(--primary-color)
+}
+.item p{
+  margin-top: 4px;
+  display: block;
+}
+.item span {
+  opacity: 0.5;
+}
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}

@@ -19,51 +19,22 @@
   width: 100%;
   padding: 15px;
   display: grid;
-  justify-items: center;
-  align-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 350px 200px;
   row-gap: 26px;
-  grid-template-areas:
-    'picture experience'
-    'about experience';
 }
 .btnContainer {
   user-select: none;
   margin-top: 20px;
 }
 
-.experience {
-  color: var(--text-color);
-  grid-area: experience;
-  background-color: var(--container-color);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  padding: 20px;
-}
-
 .picture {
-  grid-area: picture;
   color: var(--text-color);
   min-width: 340px;
-  height: 350px;
+  height: min-content;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.about {
-  line-height: 1.8rem;
-  grid-area: about;
-  color: var(--text-color);
-  padding: 15px;
-  text-align: center;
-  max-width: 420px;
 }
 
 .blob {

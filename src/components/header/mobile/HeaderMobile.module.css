@@ -1,27 +1,3 @@
-.headerOpen {
-  position: fixed;
-  bottom: 50px;
-  left: 0;
-  width: 100%;
-  height: 190px;
-  background-color: var(--bg-color);
-  z-index: 1;
-  transition: ease 0.5s;
-}
-.headerClose {
-  position: fixed;
-  bottom: -80px;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background-color: var(--bg-color);
-  z-index: 1;
-  transition: ease 0.5s;
-}
-.header > * {
-  width: 100%;
-  height: 100%;
-}
 .mobileMenu {
   position: fixed;
   bottom: 0;
@@ -34,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 28px;
-  z-index: 2;
+  z-index: 100;
   transition: var(--transition);
 }
 .btnWrapper {
@@ -58,7 +34,3 @@
   transition: var(--transition);
 }
 
-@media only screen and (max-width: 750px) {
-  .mobileMenu {
-  }
-}

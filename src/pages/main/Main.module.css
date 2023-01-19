@@ -27,24 +27,35 @@
   text-align: left;
 }
 .welcome h1 {
-  font-family: var(--font-monospace);
-  font-size: 1rem;
-  margin-bottom: 14px;
-  color: var(--primary-color)
+  margin-left: -2px;
+  font-size: clamp(3rem, 5vw, 3.5rem);
+  font-weight: 600;
+}
+.welcome h2 {
+  font-size: clamp(3rem, 5vw, 3.5rem);
+  font-weight: 600;
+  background-image: var(--gradient);
+  box-shadow: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: bg-animation 5s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+  
 }
 .welcome h3 {
-  margin-left: -3px;
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-.welcome h4 {
-  opacity: 0.4;
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-.welcome h5 {
+  display: inline-block;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  max-width: 50ch;
 }
 
 .photo {
@@ -74,7 +85,7 @@
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
-    min-height: auto;
+    min-height: calc(100vh - 80px);
     top: 0;
     gap: 0;
   }

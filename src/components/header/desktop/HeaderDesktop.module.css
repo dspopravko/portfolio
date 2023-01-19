@@ -7,14 +7,11 @@
   background-color: var(--bg-color);
   display: flex;
   justify-content: flex-end;
-  z-index: 1;
+  z-index: 2;
   transition: var(--transition);
 }
 .small {
   height: 60px;
-}
-.header > * {
-  height: 100%;
 }
 .menuBtn {
   display: none;
@@ -30,4 +27,25 @@
   bottom: 20px;
   opacity: 0.8;
   transition: var(--transition);
+}
+.links:after {
+  z-index: -1;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  content: '';
+  width: 1px;
+  height: 156%;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+  transform: translateX(-1px);
+}
+.links a {
+  display: grid;
+  place-content: center;
+  background: var(--bg-color);
+  transition: var(--transition);
+}
+.links a:hover {
+  transform: scale(1.1);
 }

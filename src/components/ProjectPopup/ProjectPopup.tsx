@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from "react";
 import s from './ProjectPopup.module.css'
 import { motion } from 'framer-motion'
-import { ProjectType } from '../../../data/projects'
+import { ProjectType } from '../../data/projects'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { Technologies } from '../../../components/technologies/Technologies'
+import { Technologies } from '../technologies/Technologies'
 
 type ProjectPopupPropsType = {
   project: ProjectType
@@ -20,6 +20,17 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
       closePopup()
     }
   }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.code === 'Escape') {
+      e.preventDefault()
+      closePopup()
+    }
+  }
+  useEffect(()=>{
+    if (popupRef.current) {
+      popupRef.current.focus()
+    }
+  }, [popupRef])
   return (
     <>
       <motion.div
@@ -29,7 +40,7 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
         onClick={overlayHandler}
         className={s.overlay}
       >
-        <motion.div ref={popupRef} className={s.popupContent} layoutId={'container' + selectedId}>
+        <motion.div tabIndex={0} onKeyDown={handleKeyDown} ref={popupRef} className={s.popupContent} layoutId={'container' + selectedId}>
           <button className={s.close} onClick={closePopup}>
             <FontAwesomeIcon icon={faXmark} />
           </button>
@@ -62,7 +73,7 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
           </div>
 
           <motion.div layoutId={'cover' + project.id} className={s.imageContainer}>
-            <img className={s.image} alt={'Social-Network-logo'} src={project.coverLogo} />
+            <motion.img layoutId={'image' + project.id} className={s.image} alt={'Social-Network-logo'} src={project.coverLogo} />
           </motion.div>
 
           <motion.h3 className={s.titleH3}>Purpose & goals</motion.h3>

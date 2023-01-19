@@ -15,8 +15,7 @@
 }
 
 .popupContent {
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin: 80px 20px 20px 20px;
     padding: 42px;
     border-radius: 12px;
     background-color: var(--container-color);
@@ -26,7 +25,7 @@
     align-items: center;
     gap: 14px;
     height: calc(100% - 50px);
-    max-width: 800px;
+    max-width: 840px;
     overflow-y: auto;
     outline: 5px solid var(--container-color);
     position: relative;
@@ -46,6 +45,7 @@
     background-color: transparent;
     color: var(--destructive-color);
     transform: scale(1.2);
+    box-shadow: none;
 }
 .close:active {
     background-color: transparent;
@@ -61,7 +61,7 @@
     color: var(--text-color);
     font-size: 2rem;
     align-self: flex-start;
-    transform: translateY(24px);
+    transform: translateY(28px);
 }
 .infoBlock {
     margin: 10px 0;
@@ -130,9 +130,15 @@
 
 @media only screen and (max-width: 750px) {
     .popupContent {
-        margin-top: 0;
-        margin-bottom: 40px;
-        padding: 6px;
+        margin: 5px 6px 62px 6px;
+        padding: 26px;
+        outline: none;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .popupContent {
+        margin: 5px 6px 62px 6px;
+        padding: 8px;
         outline: none;
     }
 }

@@ -25,11 +25,12 @@
   --very-light-color: #f1f5f6;
   --light-gray-color: #e1e1e1;
   --dark-grey-color: #262626;
-  --very-dark-grey-color: #1e1e1e;
+  --very-dark-grey-color: #1c1c1c;
   --blue-color: #5095bf;
   --dark-blue-color: #416ca6;
-  --orange-color: #d98c5f;
-  --green-color: #5fbf50;
+  --orange-color: #B45C2D;
+  --green-color: #2F8722;
+  --gradient: linear-gradient(45deg, #EA047E, #FF6D28, #FCE700, #00F5FF);
   --container-shadow: 0 0px 4px rgba(0, 0, 0, 0.15);
   --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
   --upper-shadow: 0 -4px 4px rgba(0, 0, 0, 0.04);
@@ -52,10 +53,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-.App-header {
-  width: 100%;
 }
 .App {
   --bg-color: var(--white-color);
@@ -90,14 +87,16 @@ html {
   transition: var(--transition);
 }
 .button {
-  border-radius: 12px;
-  border: none;
-  color: var(--white-color);
-  background: var(--primary-color);
-  padding: 15px;
+  border-radius: 8px;
+  padding: 17px 15px 12px 15px;
+  border: 3px solid var(--primary-color);
+  color: var(--text-color);
+  background: transparent;
   box-shadow: var(--container-shadow);
   cursor: pointer;
+  transition: var(--transition);
 }
+
 button:disabled {
   background-color: var(--bg-color);
 }
@@ -106,8 +105,11 @@ button:disabled:hover {
 }
 button:hover {
   border-radius: 12px;
-  color: var(--white-color);
-  background: var(--dark-blue-color);
+  color: var(--text-color);
+  box-shadow: var(--active-shadow);
+}
+button:active {
+  transform: scale(0.95);
 }
 .shadowBottom {
   box-shadow: var(--bottom-shadow);

@@ -18,6 +18,7 @@
   align-items: center;
   background-color: var(--bg-color);
   cursor: pointer;
+  transition: var(--transition);
 }
 .btn:hover {
   transform: scale(1.03);

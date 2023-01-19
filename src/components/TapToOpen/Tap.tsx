@@ -31,7 +31,8 @@ const SvgComponent = ({ height, width }: { width: string; height: string }) => (
       whileInView={'visible'}
       width={width}
       height={height}
-      fill="#5fbf50"
+      fill="rgba(95,191,80,0.9)"
+      opacity={0.4}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512.025 512.025"
       xmlSpace="preserve"
@@ -41,4 +42,4 @@ const SvgComponent = ({ height, width }: { width: string; height: string }) => (
   </motion.div>
 )
 
-export default SvgComponent
+export default SvgComponent;

@@ -5,15 +5,15 @@ import { ThemeButton } from '../../themeButton/themeButton'
 import { ThemeContext } from '../../../utilities/Context'
 import cx from 'classnames'
 import { langHeader } from '../../../lang'
+import { AnimatePresence } from 'framer-motion'
 
 export const HeaderMobile = () => {
   const [open, setOpen] = useState(false)
   const { y, locale } = useContext(ThemeContext)
   const l = langHeader[locale]
-
   return (
     <>
-      <div
+      <header
         className={cx({
           [s.mobileMenu]: true,
           shadowUp: y > 50 && open,
@@ -33,10 +33,8 @@ export const HeaderMobile = () => {
           </button>
           <ThemeButton />
         </div>
-      </div>
-      <div className={open ? s.headerOpen : s.headerClose}>
-        <Navbar />
-      </div>
+      </header>
+      <AnimatePresence>{open && <Navbar animate handleClose={() => setOpen(false)} />}</AnimatePresence>
     </>
   )
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 import s from './Project.module.css'
-import { ProjectType } from '../../../data/projects'
+import { ProjectType } from '../../data/projects'
 import { motion } from 'framer-motion'
-import Tap from '../../../components/TapToOpen/Tap'
 
 export type ProjectPropsType = {
   handleOpen: (id: string) => void
@@ -10,9 +9,16 @@ export type ProjectPropsType = {
   index: number
 }
 
-export const Project = ({ project, handleOpen, index }: ProjectPropsType) => {
+export const Project = ({ project, handleOpen }: ProjectPropsType) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.code === 'Enter' || e.code === 'Space') {
+      e.preventDefault()
+      handleOpen(project.id)
+    }
+  }
   return (
     <motion.div
+      tabIndex={0}
       whileHover={{
         scale: 1.005,
         transition: { duration: 0.15 },
@@ -22,17 +28,14 @@ export const Project = ({ project, handleOpen, index }: ProjectPropsType) => {
       layoutId={'container' + project.id}
       key={project.id}
       onClick={() => handleOpen(project.id)}
+      onKeyDown={handleKeyDown}
     >
-      {index === 0 && (
-        <div className={s.tapContainer}>
-          <Tap width={'50px'} height={'50px'} />
-        </div>
-      )}
       <motion.h3 layoutId={'title' + project.id}>{project.title}</motion.h3>
       <motion.div layoutId={'cover' + project.id} className={s.logoWrapper}>
-        <img alt={'Social-Network-logo'} src={project.coverLogo} />
+        <motion.img layoutId={'image' + project.id} alt={'Social-Network-logo'} src={project.coverLogo} />
       </motion.div>
       <motion.p layoutId={'description' + project.id}>{project.descriptionShort}</motion.p>
+      <p>LEARN MORE</p>
     </motion.div>
   )
 }

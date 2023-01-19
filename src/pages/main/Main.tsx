@@ -10,10 +10,9 @@ export const Main = ({ picture }: { picture: string }) => {
     <>
       <section className={s.wrapper} id={'home'}>
         <div className={s.welcome}>
-          <h1>{l.greet}</h1>
-          <h3>{l.name}</h3>
-          <h4>{l.job}</h4>
-          <h5>{l.description}</h5>
+          <h1>{l.name}</h1>
+          <h2>{l.job}</h2>
+          <h3>{l.description}</h3>
           <div className={s.btnContainer}>
             <button
               className={'button'}

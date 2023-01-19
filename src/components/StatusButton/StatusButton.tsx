@@ -20,29 +20,22 @@ const innerDivVariants = {
   },
   visible: {
     opacity: 1,
-    y: -8,
+    y: 0,
   },
   exit: {
     opacity: 0,
   },
 }
 
-export const StatusButton = ({
-  status,
-  disabled,
-  title,
-}: StatusButtonPropsType) => {
-  const enabled =
-    status === 'error' ||
-    status === 'success' ||
-    status !== 'pending' ||
-    !disabled
+export const StatusButton = ({ status, disabled, title }: StatusButtonPropsType) => {
+  const enabled = status === 'error' || status === 'success' || status !== 'pending' || !disabled
+
   return (
     <button
       disabled={!enabled}
       type="submit"
       className={cx({
-        'button': true,
+        button: true,
         [s.button]: true,
         [s.success]: status === 'success',
         [s.error]: status === 'error',
@@ -50,13 +43,7 @@ export const StatusButton = ({
     >
       <AnimatePresence>
         {status === 'idle' && (
-          <motion.div
-            key={'idle'}
-            variants={innerDivVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <motion.div key={'idle'} variants={innerDivVariants} initial="hidden" animate="visible" exit="exit">
             {title[0]}
           </motion.div>
         )}
@@ -70,6 +57,7 @@ export const StatusButton = ({
             }}
             animate={{
               opacity: 1,
+              y: 0,
             }}
             exit="exit"
           >
@@ -96,13 +84,7 @@ export const StatusButton = ({
           </motion.div>
         )}
         {status === 'error' && (
-          <motion.div
-            key={'error'}
-            variants={innerDivVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <motion.div key={'error'} variants={innerDivVariants} initial="hidden" animate="visible" exit="exit">
             {title[3]}
           </motion.div>
         )}
