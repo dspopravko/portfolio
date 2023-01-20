@@ -4,6 +4,7 @@
   font-size: 22px;
   top: 15px;
   right: 15px;
+  transition: var(--transition);
 }
 .icon:hover {
   color: var(--text-color);

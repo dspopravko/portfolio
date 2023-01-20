@@ -8,7 +8,6 @@
   width: 100%;
   background-color: var(--bg-color);
   transition: var(--transition);
-  padding: 0 20px;
 }
 
 .btnContainer {
@@ -73,6 +72,11 @@
   width: 170px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .welcome > h1, h2 {
+    line-height: 0.95em;
+  }
+}
 @media only screen and (max-width: 800px) {
   .links {
     display: none;
@@ -81,15 +85,16 @@
 
 @media only screen and (max-width: 750px) {
   .wrapper {
-    margin-top: 18px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 180px);
     top: 0;
     gap: 0;
   }
   .welcome {
+    max-width: 500px;
     padding-top: 5vw;
   }
 }
@@ -100,6 +105,9 @@
 
 }
 @media only screen and (max-width: 400px) {
+  .welcome {
+    max-width: 350px;
+  }
   .photo {
     min-width: 90%;
   }

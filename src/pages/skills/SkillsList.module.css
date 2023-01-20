@@ -16,20 +16,19 @@
 }
 .container {
   width: 100%;
-  padding: 15px;
   display: grid;
   justify-content: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  gap: calc(var(--padding) * 2);
 }
 .skill {
   color: var(--text-color);
   background-color: var(--container-color);
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: var(--radius);
+  padding: var(--padding);
   width: 100%;
-  max-width: 390px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

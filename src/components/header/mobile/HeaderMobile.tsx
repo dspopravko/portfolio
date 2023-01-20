@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import s from './HeaderMobile.module.css'
-import { Navbar } from '../../../pages/nav/Navbar'
+import { Navbar } from '../../nav/Navbar'
 import { ThemeButton } from '../../themeButton/themeButton'
 import { ThemeContext } from '../../../utilities/Context'
 import cx from 'classnames'

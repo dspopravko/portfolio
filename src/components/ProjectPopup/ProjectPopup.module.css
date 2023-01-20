@@ -17,7 +17,7 @@
 .popupContent {
     margin: 80px 20px 20px 20px;
     padding: 42px;
-    border-radius: 12px;
+    border-radius: var(--radius);
     background-color: var(--container-color);
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@
     margin: 10px 0;
     width: 100%;
     background-color: var(--bg-color);
-    border-radius: 8px;
+    border-radius: var(--radius);
     padding: 10px 20px;
 }
 .container {
@@ -90,7 +90,6 @@
 .container div p, a {
     display: inline-block;
     line-height: 1.5rem;
-    font-size: 0.8rem;
 }
 .container div a {
     color: var(--primary-color);
@@ -101,23 +100,24 @@
 }
 .imageContainer {
     flex: 0.8;
-    border-radius: 8px;
+    border-radius: var(--radius);
     width: 100%;
     height: auto;
 }
 .image {
-    border-radius: 8px;
+    border-radius: var(--radius);
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 .storyBlock {
-    border-radius: 8px;
+    border-radius: var(--radius);
     padding: 20px 20px;
     width: 100%;
     background-color: var(--bg-color);
     min-height: min-content;
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 14px
 }

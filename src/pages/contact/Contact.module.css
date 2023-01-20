@@ -17,7 +17,6 @@
   color: var(--text-color);
   min-height: 100px;
   width: 100%;
-  padding: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -30,11 +29,10 @@
   flex: auto;
 }
 .form {
-  min-width: 240px;
   background-color: var(--container-color);
-  max-width: 340px;
-  padding: 20px;
-  border-radius: 20px;
+  max-width: clamp(240px, 96vw, 340px);
+  padding: clamp(var(--padding), 3.5vw, 20px);
+  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -44,7 +42,7 @@
 textarea {
   color: var(--text-color);
   border: 2px solid var(--light-gray-color);
-  border-radius: 12px;
+  border-radius: calc(var(--radius) / 2);
   background-color: var(--bg-color);
   font-size: 1.1rem;
   min-height: 40px;
@@ -73,6 +71,14 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   gap: 16px;
+  transition: var(--transition);
+  will-change: scale;
+}
+.unit:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+.unit:active {
+  transform: scale(0.95);
 }
 .unit div:first-child {
   display: flex;

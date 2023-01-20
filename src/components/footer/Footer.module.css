@@ -1,4 +1,6 @@
 .wrapper {
+  position: absolute;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -9,6 +11,7 @@
   flex-wrap: wrap;
   padding-top: 8px;
   padding-bottom: 8px;
+  box-shadow: var(--upper-shadow);
 }
 .container {
   position: relative;
@@ -29,6 +32,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: var(--transition);
+  will-change: scale;
+}
+.link:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+.link:active {
+  transform: scale(0.95);
 }
 p,
 h2 {
@@ -37,8 +48,8 @@ h2 {
 
 @media only screen and (max-width: 750px) {
   .wrapper {
-    min-height: 200px;
-    padding-bottom: 16px;
+    min-height: 250px;
+    padding-bottom: 60px;
   }
   .container {
     gap: 10%;

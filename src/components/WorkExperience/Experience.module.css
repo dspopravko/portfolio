@@ -29,7 +29,7 @@
 }
 .item:after {
   position: absolute;
-  border-radius: 6px;
+  border-radius: calc(var(--radius)/2);
   content: '';
   top: 50%;
   left: -30px;

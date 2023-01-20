@@ -33,9 +33,11 @@
   --gradient: linear-gradient(45deg, #EA047E, #FF6D28, #FCE700, #00F5FF);
   --container-shadow: 0 0px 4px rgba(0, 0, 0, 0.15);
   --bottom-shadow: 0 -2px 8px rgba(0, 0, 0, 0.35);
-  --upper-shadow: 0 -4px 4px rgba(0, 0, 0, 0.04);
+  --upper-shadow: 0 -4px 4px rgba(0, 0, 0, 0.07);
   --active-shadow: 0 0px 8px rgb(80, 149, 191);
   --transition: ease 0.2s;
+  --padding: 20px;
+  --radius: 12px;
 
   /* App Theme */
   --primary-color: var(--blue-color);
@@ -75,16 +77,17 @@ html {
 
 .body_container {
   margin-bottom: 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   max-width: 1000px;
   gap: 80px;
   width: 100%;
 }
 .body_container > * {
   transition: var(--transition);
+}
+.body_container > section > div {
+  padding: var(--padding);
 }
 .button {
   border-radius: 8px;
@@ -123,6 +126,15 @@ button:active {
 .cursor {
   cursor: pointer;
 }
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p, a {
+  font-size: 1.2rem;
+}
 
 ::-webkit-scrollbar {
   background-color: gray;
@@ -143,8 +155,32 @@ button:active {
   background: var(--primary-color);
 }
 
+
+
 @media only screen and (max-width: 750px) {
+  :root {
+    --padding: 20px;
+  }
+
   .App {
     padding-bottom: 40px;
+    overflow-x: hidden;
+  }
+
+  .body_container > div {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  :root {
+    --padding: 15px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  :root {
+    --padding: 6px;
+  }
+
+  .body_container > section > div {
   }
 }

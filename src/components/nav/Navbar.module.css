@@ -43,6 +43,6 @@
   }
   .navbar a {
     color: var(--text-color);
-    border-radius: 12px;
+    border-radius: var(--radius);
   }
 }

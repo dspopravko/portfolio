@@ -1,7 +1,7 @@
 .mainContainer {
   width: 480px;
   height: 372px;
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: var(--container-color);
   overflow: hidden;
   box-shadow: var(--container-shadow);
@@ -16,12 +16,11 @@
   font-size: 14px;
   display: flex;
   width: 100%;
-  border-radius: 5px 5px 0 0;
+  border-radius: calc(var(--radius)/1.5) calc(var(--radius)/1.5) 0 0;
   padding: 10px 15px;
   position: relative;
   background: var(--container-color);
   cursor: pointer;
-  /*height: 24px;*/
   justify-content: space-between;
   align-items: center;
   flex: 1;
@@ -44,7 +43,7 @@
 }
 .tabGroupContainer {
   padding: 5px 5px 0;
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--radius) var(--radius) 0 0;
   height: 44px;
 }
 .content {
@@ -82,7 +81,7 @@
 }
 @media only screen and (max-width: 400px) {
   .mainContainer {
-    width: calc(100% - 20px);
+    width: 100%;
     height: 400px;
   }
   .tab {

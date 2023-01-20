@@ -71,7 +71,7 @@ export const Contact = () => {
             <div>
               <FontAwesomeIcon size={'2x'} icon={faLocationDot} color={'#416CA6'} />
             </div>
-            <div style={{ whiteSpace: 'pre-line' }}>{l.location}</div>
+            <div style={{ whiteSpace: 'pre-line' }}><p>{l.location}</p></div>
           </div>
           <div className={s.unit}>
             <div>
