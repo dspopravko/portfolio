@@ -52,16 +52,9 @@
     color: var(--destructive-color);
     transform: scale(0.9);
 }
-.titleH2 {
+.projectTitle {
     font-size: 2.5rem;
     align-self: flex-start;
-}
-.titleH3 {
-    padding: 0 20px;
-    color: var(--text-color);
-    font-size: 2rem;
-    align-self: flex-start;
-    transform: translateY(28px);
 }
 .infoBlock {
     margin: 10px 0;
@@ -110,6 +103,13 @@
     height: auto;
     object-fit: cover;
 }
+.storyBlockTitle {
+    padding: 0 20px;
+    color: var(--text-color);
+    font-size: 2rem;
+    align-self: flex-start;
+    transform: translateY(28px);
+}
 .storyBlock {
     border-radius: var(--radius);
     padding: 20px 20px;
@@ -130,15 +130,7 @@
 
 @media only screen and (max-width: 750px) {
     .popupContent {
-        margin: 5px 6px 62px 6px;
-        padding: 26px;
-        outline: none;
-    }
-}
-@media only screen and (max-width: 460px) {
-    .popupContent {
-        margin: 5px 6px 62px 6px;
-        padding: 8px;
-        outline: none;
+        margin: var(--padding) var(--padding) 65px var(--padding);
+        padding: var(--padding);
     }
 }

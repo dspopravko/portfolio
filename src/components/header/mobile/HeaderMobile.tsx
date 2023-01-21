@@ -4,8 +4,8 @@ import { Navbar } from '../../nav/Navbar'
 import { ThemeButton } from '../../themeButton/themeButton'
 import { ThemeContext } from '../../../utilities/Context'
 import cx from 'classnames'
-import { langHeader } from '../../../lang'
-import { AnimatePresence } from 'framer-motion'
+import { langHeader } from '../../../data/lang'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export const HeaderMobile = () => {
   const [open, setOpen] = useState(false)
@@ -13,7 +13,21 @@ export const HeaderMobile = () => {
   const l = langHeader[locale]
   return (
     <>
-      <header
+      <motion.header
+        key={'header-mobile'}
+        initial={{
+          opacity: 0.4,
+          y: 80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.6, delay: 0.2 },
+        }}
+        exit={{
+          opacity: 0.4,
+          y: 80,
+        }}
         className={cx({
           [s.mobileMenu]: true,
           shadowUp: y > 50 && !open,
@@ -33,7 +47,7 @@ export const HeaderMobile = () => {
           </button>
           <ThemeButton />
         </div>
-      </header>
+      </motion.header>
       <AnimatePresence>{open && <Navbar animate handleClose={() => setOpen(false)} />}</AnimatePresence>
     </>
   )

@@ -1,44 +1,23 @@
-import React, { useContext, useState } from 'react'
+import React from 'react'
 import { Loader } from '../loader/Loader'
 import s from './AppLoader.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ThemeContext } from '../../utilities/Context'
 
 type AppLoaderPropsType = {
   children: React.ReactNode
+  isLoaded: boolean
 }
 
-export const AppLoader = ({ children }: AppLoaderPropsType) => {
-  const { height } = useContext(ThemeContext)
-  const [isLoaded, setIsLoaded] = useState(false)
-  setTimeout(() => {
-    setIsLoaded(true)
-  }, 200)
-
+export const AppLoader = ({ children, isLoaded}: AppLoaderPropsType) => {
   return (
-    <AnimatePresence>
-      {isLoaded && (
-        <motion.div
-
-          layout
-          key={'app'}
-          initial={{
-            y: -height,
-            scale: 0,
-          }}
-          animate={{
-            y: 0,
-            scale: 1,
-            transition: { duration: 1.8, delay: 0.15 },
-          }}
-        >
-          {children}
-        </motion.div>
-      )}
+    <AnimatePresence mode={'wait'}>
+      <motion.div key={'app'}>
+        {children}
+      </motion.div>
       {!isLoaded && (
         <motion.div
           initial={{
-            opacity: 0,
+            opacity: 1,
           }}
           animate={{
             opacity: 1,
@@ -46,12 +25,13 @@ export const AppLoader = ({ children }: AppLoaderPropsType) => {
           }}
           exit={{
             scale: 2,
+            opacity: 0,
             transition: { duration: 0.5 },
           }}
           key={'app-loader'}
           className={s.container}
         >
-          <Loader size={'regular'} />
+          <Loader size={'large'} />
         </motion.div>
       )}
     </AnimatePresence>

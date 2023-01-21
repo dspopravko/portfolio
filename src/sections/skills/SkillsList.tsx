@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import s from './SkillsList.module.css'
 import { ThemeContext } from '../../utilities/Context'
-import { langSkills } from '../../lang'
+import { langSkills } from '../../data/lang'
 import { SkillItem } from '../../components/Skill/SkillItem'
 import { skills, stack } from "../../data";
 

@@ -6,7 +6,7 @@ import { Project } from '../../components/Project/Project'
 import { ProjectPopup } from '../../components/ProjectPopup/ProjectPopup'
 import { setDocumentScroll } from '../../utilities/setDocumentScroll'
 import { projects } from "../../data"
-import { langProjects } from '../../lang'
+import { langProjects } from '../../data/lang'
 
 export const ProjectsList = () => {
   const { locale } = useContext(ThemeContext)

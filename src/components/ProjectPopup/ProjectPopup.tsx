@@ -50,7 +50,7 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
           <button className={s.close} onClick={closePopup}>
             <FontAwesomeIcon icon={faXmark} />
           </button>
-          <motion.h2 style={{ color: project.color }} className={s.titleH2} layoutId={'title' + project.id}>
+          <motion.h2 style={{ color: project.color }} className={s.projectTitle} layoutId={'title' + project.id}>
             {project.title}
           </motion.h2>
           <motion.p layoutId={'description' + project.id}>{project.descriptionLong}</motion.p>
@@ -83,14 +83,14 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
             />
           </motion.div>
 
-          <motion.h3 className={s.titleH3}>Purpose & goals</motion.h3>
+          <motion.h3 className={s.storyBlockTitle}>Purpose & goals</motion.h3>
           <div className={s.storyBlock}>
             <div className={s.text}>
               <p>{project.goals}</p>
             </div>
           </div>
 
-          <motion.h3 style={{ alignSelf: 'flex-end' }} className={s.titleH3}>
+          <motion.h3 style={{ alignSelf: 'flex-end' }} className={s.storyBlockTitle}>
             Web stack
           </motion.h3>
           <div className={s.storyBlock}>
@@ -102,14 +102,14 @@ export const ProjectPopup = ({ closePopup, selectedId, project, children }: Proj
             </div>
           </div>
 
-          <motion.h3 className={s.titleH3}>Problems & process</motion.h3>
+          <motion.h3 className={s.storyBlockTitle}>Problems & process</motion.h3>
           <div className={s.storyBlock}>
             <div className={s.text}>
               <p>{project.problems}</p>
             </div>
           </div>
 
-          <motion.h3 style={{ alignSelf: 'flex-end' }} className={s.titleH3}>
+          <motion.h3 style={{ alignSelf: 'flex-end' }} className={s.storyBlockTitle}>
             Lesson learned
           </motion.h3>
           <div className={s.storyBlock}>

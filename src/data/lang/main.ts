@@ -6,7 +6,7 @@ export const main = {
     contactMe: 'Contact me',
   },
   ru: {
-    name: 'Привет, меня зовут Демид Поправко,',
+    name: 'Привет, я Демид Поправко,',
     job: 'и я Frontend разработчик',
     description:
       '',

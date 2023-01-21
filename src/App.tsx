@@ -11,16 +11,18 @@ import useScrollDimensions from './utilities/useScrollDimensions'
 import { Footer } from './components/footer/Footer'
 import { HeaderMobile } from './components/header/mobile/HeaderMobile'
 import { HeaderDesktop } from './components/header/desktop/HeaderDesktop'
-import profilePictureRmBg from './assets/profile/profilePictureRmBg.png'
+import { AnimatePresence } from 'framer-motion'
 import { About } from './sections/about/About'
 import cx from 'classnames'
 import { AppLoader } from './components/appLoader/AppLoader'
+import { usePageLoadedState } from './utilities/usePageLoadedState'
 
 function App() {
   const [dark, setDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
   const [locale, setLocale] = useState(localeT.En)
   const { height, width } = useWindowDimensions()
   const { y } = useScrollDimensions()
+  const [isLoaded] = usePageLoadedState()
   return (
     <ThemeContext.Provider
       value={{
@@ -38,11 +40,17 @@ function App() {
           'App dark': dark,
           App: !dark,
         })}
+        style={{
+          fontFamily: cx({
+            Calibre: locale === localeT.En,
+            'Fira Sans': locale === localeT.Ru,
+          }),
+        }}
       >
-        <AppLoader>
-          {width < 750 ? <HeaderMobile /> : <HeaderDesktop />}
+        <AppLoader isLoaded={isLoaded}>
+          <AnimatePresence>{width < 750 ? <HeaderMobile /> : <HeaderDesktop />}</AnimatePresence>
           <div className={'body_container'}>
-            <Main picture={profilePictureRmBg} />
+            <Main isLoaded={isLoaded}/>
             <About />
             <SkillsList />
             <ProjectsList />

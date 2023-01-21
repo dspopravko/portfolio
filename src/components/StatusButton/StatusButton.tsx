@@ -16,14 +16,17 @@ type StatusButtonPropsType = {
 const innerDivVariants = {
   hidden: {
     opacity: 0,
-    y: 6,
+    y: -16,
   },
   visible: {
     opacity: 1,
     y: 0,
+    transition: {duration: 0.2, type: "tween"}
   },
   exit: {
     opacity: 0,
+    y: 14,
+    transition: {duration: 0.2, type: "tween"}
   },
 }
 
@@ -39,11 +42,12 @@ export const StatusButton = ({ status, disabled, title }: StatusButtonPropsType)
         [s.button]: true,
         [s.success]: status === 'success',
         [s.error]: status === 'error',
+        [s.pending]: status === 'pending',
       })}
     >
-      <AnimatePresence>
+      <AnimatePresence mode={'wait'}>
         {status === 'idle' && (
-          <motion.div key={'idle'} variants={innerDivVariants} initial="hidden" animate="visible" exit="exit">
+          <motion.div key={'idle'} variants={innerDivVariants} initial={{y: 0, opacity: 0}} animate="visible" exit="exit">
             {title[0]}
           </motion.div>
         )}
@@ -51,14 +55,8 @@ export const StatusButton = ({ status, disabled, title }: StatusButtonPropsType)
           <motion.div
             key={'pending'}
             variants={innerDivVariants}
-            initial={{
-              opacity: 0,
-              y: -22,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
+            initial={'hidden'}
+            animate={'visible'}
             exit="exit"
           >
             <Loader size={'small'} />
@@ -68,15 +66,9 @@ export const StatusButton = ({ status, disabled, title }: StatusButtonPropsType)
           <motion.div
             key={'success'}
             variants={innerDivVariants}
-            initial={{
-              opacity: 0,
-              y: -10,
-            }}
-            animate={{
-              opacity: 1,
-              y: -25,
-            }}
-            exit="exit"
+            initial={'hidden'}
+            animate={'visible'}
+            exit={'exit'}
             className={s.successContainer}
           >
             {title[2]}

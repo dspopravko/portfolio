@@ -39,3 +39,7 @@
   height: 100%;
   text-align: center;
 }
+.pending {
+  background-color: var(--bg-color);
+  border-color: var(--primary-color);
+}

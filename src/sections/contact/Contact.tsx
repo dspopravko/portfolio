@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTelegram } from '@fortawesome/free-brands-svg-icons'
 import { ThemeContext } from '../../utilities/Context'
-import { contact } from '../../lang/contact'
+import { contact } from '../../data/lang/contact'
 import * as yup from 'yup'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -71,7 +71,9 @@ export const Contact = () => {
             <div>
               <FontAwesomeIcon size={'2x'} icon={faLocationDot} color={'#416CA6'} />
             </div>
-            <div style={{ whiteSpace: 'pre-line' }}><p>{l.location}</p></div>
+            <div style={{ whiteSpace: 'pre-line' }}>
+              <p>{l.location}</p>
+            </div>
           </div>
           <div className={s.unit}>
             <div>

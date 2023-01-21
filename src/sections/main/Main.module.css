@@ -1,10 +1,9 @@
 .wrapper {
   user-select: none;
   min-height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(200px, 800px) 1fr;
+  align-content: center;
   width: 100%;
   background-color: var(--bg-color);
   transition: var(--transition);
@@ -16,9 +15,13 @@
 }
 
 .welcome {
+  justify-self: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 50px;
   color: var(--text-color);
-  width: 100%;
+  width: fit-content;
   padding-left: 16px;
   text-align: left;
 }
@@ -59,8 +62,7 @@
 
 .photo {
   color: var(--text-color);
-  min-width: 340px;
-  flex-direction: row;
+  width: clamp(368px, 34vw, 420px);
 }
 
 .blob {
@@ -77,32 +79,44 @@
     line-height: 0.95em;
   }
 }
+@media only screen and (max-width: 850px) {
+  .wrapper {
+    margin-top: 60px;
+    min-height: calc(100vh - 180px);
+    top: 0;
+    gap: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-rows: auto auto;
+    grid-template-columns: none;
+    align-content: center;
+  }
+  .photo {
+    grid-row: 1;
+    align-self: end;
+  }
+  .welcome {
+    align-self: start;
+    max-width: 500px;
+    padding-top: 5vw;
+  }
+}
 @media only screen and (max-width: 800px) {
   .links {
     display: none;
   }
 }
-
 @media only screen and (max-width: 750px) {
   .wrapper {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: nowrap;
-    min-height: calc(100vh - 180px);
-    top: 0;
-    gap: 0;
-  }
-  .welcome {
-    max-width: 500px;
-    padding-top: 5vw;
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 540px) {
   .welcome > h1, h2 {
     line-height: 0.9em;
   }
-
 }
 @media only screen and (max-width: 400px) {
   .welcome {
@@ -110,5 +124,6 @@
   }
   .photo {
     min-width: 90%;
+    width: clamp(100px, 80vw, 420px);
   }
 }

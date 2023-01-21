@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import s from './Navbar.module.css'
 import { ThemeContext } from '../../utilities/Context'
-import { langNavbar } from '../../lang'
+import { langNavbar } from '../../data/lang'
 import { motion } from 'framer-motion'
 
 const navbarVariant = {

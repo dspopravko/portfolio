@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import s from './Remote.module.css'
 import { ThemeContext } from '../../utilities/Context'
-import { langRemote } from '../../lang'
+import { langRemote } from '../../data/lang'
 
 export const Remote = () => {
   const { locale } = useContext(ThemeContext)

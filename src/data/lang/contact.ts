@@ -20,4 +20,3 @@ export const contact = {
     },
   },
 }
-// statuses = 'idle' | 'pending' | 'success' | 'error'

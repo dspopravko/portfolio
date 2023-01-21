@@ -7,26 +7,28 @@ import { LanguageBtn } from '../../languageBtn/LanguageBtn'
 import cx from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export const HeaderDesktop = () => {
   const { y, width } = useContext(ThemeContext)
 
   return (
     <>
-      <AnimatePresence>
         {width > 1300 && y < 50 && (
           <motion.div
+            key={'bottom-links'}
             initial={{
-              opacity: 0.4,
+              opacity: 0,
               y: 20,
             }}
             animate={{
               opacity: 1,
               y: 0,
+              transition: {delay: 0.5}
             }}
             exit={{
-              opacity: 0,
+              opacity: 0.4,
+              y: 80,
             }}
             className={s.links}
           >
@@ -38,8 +40,16 @@ export const HeaderDesktop = () => {
             </a>
           </motion.div>
         )}
-      </AnimatePresence>
-      <header
+      <motion.header
+        key={'header-desktop'}
+        initial={{
+          opacity: 0.4,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
         className={cx({
           [s.header]: true,
           [s.small]: y > 50,
@@ -49,7 +59,7 @@ export const HeaderDesktop = () => {
         <LanguageBtn />
         <ThemeButton />
         <Navbar />
-      </header>
+      </motion.header>
     </>
   )
 }

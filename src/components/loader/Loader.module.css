@@ -3,6 +3,7 @@
   height: 48px;
   display: inline-block;
   position: relative;
+  --radius: 6px
 }
 .loader::after,
 .loader::before {
@@ -11,7 +12,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 6px solid #fff;
+  border: var(--radius) solid #fff;
   position: absolute;
   left: 0;
   top: 0;
@@ -25,7 +26,7 @@
 }
 .loaderLight::after,
 .loaderLight::before {
-  border: 6px solid #000000;
+  border: var(--radius) solid #000000;
 }
 @keyframes animloader {
   0% {
