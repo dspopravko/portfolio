@@ -177,7 +177,7 @@ p, a {
 }
 @media only screen and (max-width: 400px) {
   :root {
-    --padding: 6px;
+    --padding: 10px;
   }
 
   .body_container > section > div {

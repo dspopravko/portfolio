@@ -21,7 +21,7 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   justify-content: center;
   justify-items: center;
-  gap: var(--padding);
+  gap: 20px;
 }
 
 @media only screen and (max-width: 750px) {

@@ -20,6 +20,6 @@
   justify-content: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--padding);
+  gap: 20px;
 }
 

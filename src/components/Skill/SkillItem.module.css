@@ -3,16 +3,17 @@
   background-color: var(--container-color);
   border-radius: var(--radius);
   padding: var(--padding);
+  min-height: 140px;
   width: 100%;
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   box-shadow: var(--container-shadow);
 }
 .skill > h3 {
-  margin: calc(var(--padding)/2);
+  margin-top: calc(var(--padding)/2);
 }
 .logoWrapper {
   width: 50px;
