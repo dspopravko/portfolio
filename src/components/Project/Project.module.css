@@ -2,7 +2,7 @@
     color: var(--text-color);
     background-color: var(--container-color);
     width: 100%;
-    max-width: 460px;
+    max-width: 470px;
     min-height: 280px;
     border-radius: var(--radius);
     padding: calc(var(--padding));

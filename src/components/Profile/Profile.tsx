@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import s from './AboutMe.module.css'
+import s from './Profile.module.css'
 import { Experience } from '../WorkExperience/Experience'
-import { workExperience } from '../../data/aboutMe/workExperience'
-import { education } from '../../data/aboutMe/educationExperience'
-import { general } from '../../data/aboutMe/general'
+import { work, education, introduction} from "../../data"
 
 interface Ingredient {
   icon: string
@@ -17,7 +15,7 @@ export const tabs: Ingredient[] = [
   { icon: '🎓', label: 'Education' },
 ]
 
-export const AboutMe = () => {
+export const Profile = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
 
   return (
@@ -45,8 +43,8 @@ export const AboutMe = () => {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {selectedTab.label === 'General' && <p>{general}</p>}
-            {selectedTab.label === 'Work' && <Experience items={workExperience} />}
+            {selectedTab.label === 'General' && <p>{introduction}</p>}
+            {selectedTab.label === 'Work' && <Experience items={work} />}
             {selectedTab.label === 'Education' && <Experience items={education} />}
           </motion.div>
         </AnimatePresence>

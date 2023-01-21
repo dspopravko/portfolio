@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState } from 'react'
 import { Loader } from '../loader/Loader'
 import s from './AppLoader.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ThemeContext } from "../../utilities/Context";
+import { ThemeContext } from '../../utilities/Context'
 
 type AppLoaderPropsType = {
   children: React.ReactNode
@@ -19,20 +19,19 @@ export const AppLoader = ({ children }: AppLoaderPropsType) => {
     <AnimatePresence>
       {isLoaded && (
         <motion.div
+
           layout
           key={'app'}
           initial={{
             y: -height,
-            scale: 0
+            scale: 0,
           }}
           animate={{
             y: 0,
             scale: 1,
-
             transition: { duration: 1.8, delay: 0.15 },
           }}
         >
-
           {children}
         </motion.div>
       )}

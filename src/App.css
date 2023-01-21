@@ -83,7 +83,8 @@ html {
   gap: 80px;
   width: 100%;
 }
-.body_container > * {
+.body_container > section {
+  scroll-margin-block-start: 100px;
   transition: var(--transition);
 }
 .body_container > section > div {
@@ -154,8 +155,6 @@ p, a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
 }
-
-
 
 @media only screen and (max-width: 750px) {
   :root {

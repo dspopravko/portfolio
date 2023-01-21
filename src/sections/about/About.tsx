@@ -3,7 +3,7 @@ import s from './About.module.css'
 import profilePictureRmBg from '../../assets/profile/profilePicture2RmBg.png'
 import { ThemeContext } from '../../utilities/Context'
 import { langAbout } from '../../lang'
-import { AboutMe } from '../../components/AboutMe/AboutMe'
+import { Profile } from '../../components/Profile/Profile'
 
 export const About = () => {
   const { locale } = useContext(ThemeContext)
@@ -28,7 +28,7 @@ export const About = () => {
               <button className={'button'}>{l.button}</button>
             </div>
         </div>
-        <AboutMe />
+        <Profile />
       </div>
     </section>
   )

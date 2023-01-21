@@ -1,4 +1,6 @@
-export const education = [
+import { ExperienceType } from "./type";
+
+export const education: ExperienceType[] = [
   {
     title: '💻 Learning React',
     description: 'At IT Incubator',

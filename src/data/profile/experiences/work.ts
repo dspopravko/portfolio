@@ -1,4 +1,6 @@
-export const workExperience = [
+import { ExperienceType } from "./type";
+
+export const work: ExperienceType[] = [
   {
     title: '🐬 Project Cards',
     description: 'Commercial project with a team',

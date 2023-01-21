@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 660px;
+  width: 100%;
+  background-color: var(--bg-color);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.title {
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--padding);
+}
+

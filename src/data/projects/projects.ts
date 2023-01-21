@@ -1,13 +1,14 @@
-import typingapp from '../assets/projects/typingapp.png'
-import cards from '../assets/projects/cards.png'
-import todolist from '../assets/projects/todolist.png'
-import socialnetwork from '../assets/projects/socialnetwork.png'
+import typingapp from '../../assets/projects/typingapp.png'
+import cards from '../../assets/projects/cards.png'
+import todolist from '../../assets/projects/todolist.png'
+import socialnetwork from '../../assets/projects/socialnetwork.png'
+import { StackTitle } from "../stack/stack";
 
 export type ProjectType = {
   id: string
   title: string
   projectType: string
-  technologies: Array<typeof technologies[number]>
+  projectStack: StackTitle[]
   goals: string
   stack: string
   problems: string
@@ -20,22 +21,6 @@ export type ProjectType = {
   color: string
 }
 
-export const technologies = [
-  'React',
-  'Redux',
-  'Redux Thunk',
-  'Redux Toolkit',
-  'Material UI',
-  'Storybook',
-  'Unit-tests',
-  'Snapshots',
-  'React-tables',
-  'Framer Motion',
-  'Formik',
-  'React-hook-form',
-  'Vite',
-] as const
-
 export const projects: ProjectType[] = [
   {
     id: '1',
@@ -46,13 +31,13 @@ export const projects: ProjectType[] = [
     stack:
       'To manage the state of the application, the redux toolkit was used as the most modern and optimal solution. React tables were used to render tables as one of the most advanced lightweight solutions. For UI library, we used Material UI, as a compromise to get the application development started faster. Also, for processing forms, we used the react hook form as the most modern and performant. To improve the user experience, a framer motion was also added to the application.',
     problems:
-      'The most difficult part of the project was working with the correct URI parameters, synchronizing it with the table control block and minimizing the number of requests to the backend. Experience was gained in structuring a complex application, with a large number of pages, states, and components. It was also necessary to distribute tasks in the team, monitor their status and implement the developed features.',
+      'The most difficult part of the project was working with the correct URI parameters, synchronizing it with the table control block and minimizing the number of requests to the backend. Experience was gained in structuring a complex application, with a large number of sections, states, and components. It was also necessary to distribute tasks in the team, monitor their status and implement the developed features.',
     final:
       'This project has taught me how to work in a team and be responsible for carry out the development process. Using libraries new to me during product development showed the importance of doing research before estimating.\n I learned a lot about code structure and organization, many hours were spent on refactoring & reorganization. The front end of the application is ready to use, has nice UI and animations, and the interface encourages user to explore the cards library of other users.',
     githubLink: 'https://github.com/dspopravko/friday-project',
     deployLink: 'https://cards-lovat-eight.vercel.app/',
     coverLogo: cards,
-    technologies: ['React', 'Redux Toolkit', 'React-tables', 'Material UI', 'Framer Motion', 'React-hook-form'],
+    projectStack: ['React', 'Redux Toolkit', 'React-tables', 'Material UI', 'Framer Motion', 'React-hook-form'],
     descriptionShort:
       'Cards is full-fledged frontend app, developed in a team, with full authentication cycle. Cards use spaced repetition technique for you to quickly memorize things.',
     descriptionLong:
@@ -64,7 +49,7 @@ export const projects: ProjectType[] = [
     title: 'Todolist',
     projectType: 'Learning Project',
     goals:
-      'The project was created to explore modern technologies for writing spa applications. The goals included writing state management from classic redux to redux toolkit using unit tests, connecting a storybook to track component states, as well as for snapshot testing.',
+      'The project was created to explore modern Stack for writing spa applications. The goals included writing state management from classic redux to redux toolkit using unit tests, connecting a storybook to track component states, as well as for snapshot testing.',
     stack:
       'For a deep understanding of state management, the project was started on the classic redux. To ensure that the visual elements of the frontend project are consistent and match the expected output snapshot tests were used, and the use of a Storybook allows for easy testing and documenting of the different components and states of the frontend.',
     problems:
@@ -74,7 +59,7 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/dspopravko/03-todolist',
     deployLink: 'https://github.com/dspopravko',
     coverLogo: todolist,
-    technologies: ['React', 'Redux Thunk', 'Storybook', 'Snapshots', 'Unit-tests', 'Material UI', 'Formik'],
+    projectStack: ['React', 'Redux Thunk', 'Storybook', 'Snapshots', 'Unit-tests', 'Material UI', 'Formik'],
     descriptionShort:
       'Built using React framework, Material UI and Redux. To ensure proper functionality and stability implemented unit-test and snapshot tests.',
     descriptionLong:
@@ -96,11 +81,11 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/dspopravko/04-samurai-way',
     deployLink: 'https://github.com/dspopravko',
     coverLogo: socialnetwork,
-    technologies: ['React', 'Redux', 'Redux Thunk', 'Storybook', 'Unit-tests', 'Formik'],
+    projectStack: ['React', 'Redux', 'Redux Thunk', 'Storybook', 'Unit-tests', 'Formik'],
     descriptionShort:
-      'Social Network is an rather complex online platform, with many pages, redirection and state managing.',
+      'Social Network is an rather complex online platform, with many sections, redirection and state managing.',
     descriptionLong:
-      'Social Network is an rather complex online platform, with many pages, redirection and state managing. This app was written in react class components.',
+      'Social Network is an rather complex online platform, with many sections, redirection and state managing. This app was written in react class components.',
     color: '#ffd166',
   },
   {
@@ -118,7 +103,7 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/dspopravko/typingapp',
     deployLink: 'https://dspopravko.github.io/typingapp/',
     coverLogo: typingapp,
-    technologies: ['Vite', 'React', 'Redux'],
+    projectStack: ['Vite', 'React', 'Redux'],
     descriptionShort: 'Typing app helps to learn touch typing. Build with redux, supports multiple layouts.',
     descriptionLong:
       'Typing app helps to learn touch typing. Build with redux, supports multiple layouts and display of keyboard miss statistics.',

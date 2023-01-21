@@ -21,11 +21,11 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   justify-content: center;
   justify-items: center;
-  gap: calc(var(--padding) * 2);
+  gap: var(--padding);
 }
 
-@media only screen and (max-width: 930px) {
-  .container {
+@media only screen and (max-width: 750px) {
+  .wrapper {
     gap: 20px;
   }
 }

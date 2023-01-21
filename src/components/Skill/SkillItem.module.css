@@ -1,0 +1,25 @@
+.skill {
+  color: var(--text-color);
+  background-color: var(--container-color);
+  border-radius: var(--radius);
+  padding: var(--padding);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: var(--container-shadow);
+}
+.skill > h3 {
+  margin: calc(var(--padding)/2);
+}
+.logoWrapper {
+  width: 50px;
+  height: 50px;
+}
+.logoWrapper img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

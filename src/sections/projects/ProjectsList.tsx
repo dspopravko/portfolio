@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import { Project } from '../../components/Project/Project'
 import { ProjectPopup } from '../../components/ProjectPopup/ProjectPopup'
 import { setDocumentScroll } from '../../utilities/setDocumentScroll'
-import { projects } from '../../data/projects'
+import { projects } from "../../data"
 import { langProjects } from '../../lang'
 
 export const ProjectsList = () => {

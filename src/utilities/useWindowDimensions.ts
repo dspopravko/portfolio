@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { throttle } from "./throttle";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window
@@ -18,8 +19,8 @@ export default function useWindowDimensions() {
       setWindowDimensions(getWindowDimensions())
     }
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    window.addEventListener('resize', throttle(handleResize, 100))
+    return () => window.removeEventListener('resize', throttle(handleResize, 100))
   }, [])
 
   return windowDimensions

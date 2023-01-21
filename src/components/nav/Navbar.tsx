@@ -30,11 +30,11 @@ export const Navbar = ({ handleClose, animate = false }: { handleClose?: () => v
       className={s.navbar}
       onClick={handleClose}
     >
-      <a href="src/components/nav/Navbar#home">{l.home}</a>
-      <a href="src/components/nav/Navbar#about">{l.about}</a>
-      <a href="src/components/nav/Navbar#skills">{l.skills}</a>
-      <a href="src/components/nav/Navbar#projects">{l.projects}</a>
-      <a href="src/components/nav/Navbar#remote">{l.contacts}</a>
+      <a href="#home">{l.home}</a>
+      <a href="#about">{l.about}</a>
+      <a href="#skills">{l.skills}</a>
+      <a href="#projects">{l.projects}</a>
+      <a href="#remote">{l.contacts}</a>
       <a target={'_blank'} style={{ color: 'red' }} href="https://youtu.be/dQw4w9WgXcQ" rel="noreferrer">
         {l.cv}
       </a>

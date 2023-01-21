@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Project.module.css'
-import { ProjectType } from '../../data/projects'
 import { motion } from 'framer-motion'
+import { ProjectType } from "../../data";
 
 export type ProjectPropsType = {
   handleOpen: (id: string) => void
