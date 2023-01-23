@@ -8,14 +8,13 @@ import { Remote } from './sections/remote/Remote'
 import { Contact } from './sections/contact/Contact'
 import useWindowDimensions from './utilities/useWindowDimensions'
 import useScrollDimensions from './utilities/useScrollDimensions'
-import { Footer } from './components/footer/Footer'
-import { HeaderMobile } from './components/header/mobile/HeaderMobile'
-import { HeaderDesktop } from './components/header/desktop/HeaderDesktop'
-import { AnimatePresence } from 'framer-motion'
+import { Footer } from './layout/Footer/Footer'
 import { About } from './sections/about/About'
-import cx from 'classnames'
-import { AppLoader } from './components/appLoader/AppLoader'
+import { AppLoader } from './layout/AppLoader/AppLoader'
 import { usePageLoadedState } from './utilities/usePageLoadedState'
+import { ContentContainer } from './layout/ContentContainer/ContentContainer'
+import { ThemeContainer } from './layout/ThemeContainer/ThemeContainer'
+import { Header } from './layout/Header'
 
 function App() {
   const [dark, setDark] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -35,31 +34,20 @@ function App() {
         setDark,
       }}
     >
-      <div
-        className={cx({
-          'App dark': dark,
-          App: !dark,
-        })}
-        style={{
-          fontFamily: cx({
-            Calibre: locale === localeT.En,
-            'Fira Sans': locale === localeT.Ru,
-          }),
-        }}
-      >
+      <ThemeContainer>
         <AppLoader isLoaded={isLoaded}>
-          <AnimatePresence>{width < 750 ? <HeaderMobile /> : <HeaderDesktop />}</AnimatePresence>
-          <div className={'body_container'}>
-            <Main isLoaded={isLoaded}/>
+          <Header />
+          <ContentContainer>
+            <Main isLoaded />
             <About />
             <SkillsList />
             <ProjectsList />
             <Remote />
             <Contact />
-          </div>
+          </ContentContainer>
           <Footer />
         </AppLoader>
-      </div>
+      </ThemeContainer>
     </ThemeContext.Provider>
   )
 }

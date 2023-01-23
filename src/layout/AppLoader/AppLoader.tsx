@@ -1,5 +1,5 @@
 import React from 'react'
-import { Loader } from '../loader/Loader'
+import { Loader } from '../../components/loader/Loader'
 import s from './AppLoader.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
 

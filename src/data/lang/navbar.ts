@@ -5,7 +5,6 @@ export const navbar = {
     skills: 'Skills',
     projects: 'Projects',
     contacts: 'Contacts',
-    cv: 'CV',
   },
   ru: {
     home: 'Домой',
@@ -13,6 +12,5 @@ export const navbar = {
     skills: 'Навыки',
     projects: 'Проекты',
     contacts: 'Контакты',
-    cv: 'CV',
   },
 }

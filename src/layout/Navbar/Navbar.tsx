@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import s from './Navbar.module.css'
+import { Link } from 'react-scroll'
 import { ThemeContext } from '../../utilities/Context'
 import { langNavbar } from '../../data/lang'
 import { motion } from 'framer-motion'
@@ -30,14 +31,20 @@ export const Navbar = ({ handleClose, animate = false }: { handleClose?: () => v
       className={s.navbar}
       onClick={handleClose}
     >
-      <a href="#home">{l.home}</a>
-      <a href="#about">{l.about}</a>
-      <a href="#skills">{l.skills}</a>
-      <a href="#projects">{l.projects}</a>
-      <a href="#remote">{l.contacts}</a>
-      <a target={'_blank'} style={{ color: 'red' }} href="https://youtu.be/dQw4w9WgXcQ" rel="noreferrer">
-        {l.cv}
-      </a>
+      {Object.entries(l).map((el) => {
+        return (
+          <li key={el[0]}>
+            <Link to={el[0]} offset={-80} spy smooth className={s.link} activeClass={s.activeLink}>
+              {el[1]}
+            </Link>
+          </li>
+        )
+      })}
+      <li>
+        <a target={'_blank'} style={{ color: 'red' }} href="https://youtu.be/dQw4w9WgXcQ" rel="noreferrer">
+          CV
+        </a>
+      </li>
     </motion.div>
   )
 }

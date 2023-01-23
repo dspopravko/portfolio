@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import s from './HeaderMobile.module.css'
-import { Navbar } from '../../nav/Navbar'
-import { ThemeButton } from '../../themeButton/themeButton'
+import { Navbar } from '../../Navbar/Navbar'
+import { ThemeButton } from '../../../components/themeButton/themeButton'
 import { ThemeContext } from '../../../utilities/Context'
 import cx from 'classnames'
 import { langHeader } from '../../../data/lang'
@@ -14,7 +14,7 @@ export const HeaderMobile = () => {
   return (
     <>
       <motion.header
-        key={'header-mobile'}
+        key={'Header-mobile'}
         initial={{
           opacity: 0.4,
           y: 80,

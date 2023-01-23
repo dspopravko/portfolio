@@ -43,7 +43,7 @@ export const Contact = () => {
   }
 
   return (
-    <section className={s.wrapper} id={'contact'}>
+    <section className={s.wrapper} id={'contacts'}>
       <div className={s.title}>
         <h2>{l.title}</h2>
       </div>

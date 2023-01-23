@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import s from './HeaderDesktop.module.css'
-import { ThemeButton } from '../../themeButton/themeButton'
+import { ThemeButton } from '../../../components/themeButton/themeButton'
 import { ThemeContext } from '../../../utilities/Context'
-import { Navbar } from '../../nav/Navbar'
-import { LanguageBtn } from '../../languageBtn/LanguageBtn'
+import { Navbar } from '../../Navbar/Navbar'
+import { LanguageBtn } from '../../../components/languageBtn/LanguageBtn'
 import cx from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -41,7 +41,7 @@ export const HeaderDesktop = () => {
           </motion.div>
         )}
       <motion.header
-        key={'header-desktop'}
+        key={'Header-desktop'}
         initial={{
           opacity: 0.4,
           y: -80,
