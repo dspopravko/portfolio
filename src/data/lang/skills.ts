@@ -1,6 +1,6 @@
 export const skills = {
   en: {
-    title: 'There are my skills',
+    title: 'My skills',
   },
   ru: {
     title: 'Мои навыки',

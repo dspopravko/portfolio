@@ -12,7 +12,8 @@ import typescript from './../../assets/icons/typescript.svg'
 import javascript from './../../assets/icons/javascript.svg'
 import rest from './../../assets/icons/rest.svg'
 import git from './../../assets/icons/git.svg'
-import figma from './../../assets/icons/figma.svg'
+import html from './../../assets/icons/html.svg'
+import css from './../../assets/icons/css.svg'
 
 export type StackTitle = typeof stack[number]['title']
 
@@ -35,5 +36,6 @@ export const stack = [
   { title: 'Formik' as const, img: formik },
   { title: 'React-hook-form' as const, img: reacthookform },
   { title: 'Vite' as const, img: vite },
-  { title: 'Figma' as const, img: figma },
+  { title: 'HTML' as const, img: html },
+  { title: 'CSS' as const, img: css },
 ]

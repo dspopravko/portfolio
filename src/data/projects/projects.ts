@@ -29,9 +29,9 @@ export const projects: ProjectType[] = [
     goals:
       'This project was created in a team as a commercial one. The work plan included:\n 1. Development of a full cycle of authentication, account creation, password recovery through a mail token and login. \n 2. Development of an interface for tables of cards, decks and users with search, sorting and pagination.\n 3. Development of the process of learning cards according to the principle of spaced repetition. \n 4. Development of modal windows, with support for adding images. And many other related tasks.',
     stack:
-      'To manage the state of the application, the redux toolkit was used as the most modern and optimal solution. React tables were used to render tables as one of the most advanced lightweight solutions. For UI library, we used Material UI, as a compromise to get the application development started faster. Also, for processing forms, we used the react hook form as the most modern and performant. To improve the user experience, a framer motion was also added to the application.',
+      'To manage the state of the application, the redux toolkit was used as the most modern solution with great DX. React tables were used to render tables as one of the most advanced lightweight solutions. For UI library, we used Material UI, to get the application development started faster. Also, for processing forms, we used the react hook form as the most modern and performant. To improve the user experience, a framer motion was also added to the application.',
     problems:
-      'The most difficult part of the project was working with the correct URI parameters, synchronizing it with the table control block and minimizing the number of requests to the backend. Experience was gained in structuring a complex application, with a large number of sections, states, and components. It was also necessary to distribute tasks in the team, monitor their status and implement the developed features.',
+      'The most difficult part of the project was working with the correct URI parameters, synchronizing it with the table control block and minimizing the number of requests to the backend. Experience was gained in structuring a complex application, with a large number of pages, states, and components. It was also necessary to distribute tasks in the team, monitor their status and implement the developed features.',
     final:
       'This project has taught me how to work in a team and be responsible for carry out the development process. Using libraries new to me during product development showed the importance of doing research before estimating.\n I learned a lot about code structure and organization, many hours were spent on refactoring & reorganization. The front end of the application is ready to use, has nice UI and animations, and the interface encourages user to explore the cards library of other users.',
     githubLink: 'https://github.com/dspopravko/friday-project',
@@ -49,15 +49,15 @@ export const projects: ProjectType[] = [
     title: 'Todolist',
     projectType: 'Learning Project',
     goals:
-      'The project was created to explore modern Stack for writing spa applications. The goals included writing state management from classic redux to redux toolkit using unit tests, connecting a storybook to track component states, as well as for snapshot testing.',
+      'The project was created to explore modern stack for writing SPA applications. The goals included writing state management from classic redux to redux toolkit using unit tests, connecting a storybook to track component states, as well as for snapshot testing.',
     stack:
       'For a deep understanding of state management, the project was started on the classic redux. To ensure that the visual elements of the frontend project are consistent and match the expected output snapshot tests were used, and the use of a Storybook allows for easy testing and documenting of the different components and states of the frontend.',
     problems:
       'During development, there were difficulties with the synchronization of the states of the reducers for tasks and for lists of tasks, since it is difficult to be sure that each reducer works correctly. I also had to solve the problem of an excessive number of react renders using hooks.',
     final:
       'First of all, this project taught me how to work with the complex global state of the application, with redux and redux toolkit. This showed me the importance of using unit tests to develop complex stateful SPA. I learned how to connect REST API and process and debug requests, got acquainted with the Material UI and Formik libraries. ',
-    githubLink: 'https://github.com/dspopravko/03-todolist',
-    deployLink: 'https://github.com/dspopravko',
+    githubLink: 'https://github.com/dspopravko/todolist',
+    deployLink: 'https://dspopravko.github.io/todolist/',
     coverLogo: todolist,
     projectStack: ['React', 'Redux Thunk', 'Storybook', 'Snapshots', 'Unit-tests', 'Material UI', 'Formik'],
     descriptionShort:
@@ -73,15 +73,15 @@ export const projects: ProjectType[] = [
     goals:
       'The goal of this project was to explore React starting with class components, higher order components such as connect, component lifecycle, routing, and classic redux.',
     stack:
-      'For a deep understanding of state management, the project was started on the classic redux. To ensure that the visual elements of the frontend project are consistent and match the expected output snapshot tests were used, and the use of a Storybook allows for easy testing and documenting of the different components and states of the frontend.',
+      'The main focus of the project was to study the react library and state management, so the web stack itself turned out to be pretty small. In addition to the react and redax libraries, the redux-thunk middleware was added, as well as formik for the login form, and axios for REST API requests.',
     problems:
-      'During development, there were difficulties with the synchronization of the states of the reducers for tasks and for lists of tasks, since it is difficult to be sure that each reducer works correctly. I also had to solve the problem of an excessive number of react renders using hooks.',
+      'The main problem of the whole project is the legacy code and outdated libraries, so in its current state it will be easier to rewrite the application again than to update it. Many other complexities follow from this, managing the life cycle of a class component is more difficult than a functional component using hooks, container components introduce additional layers, classic redux has a lot of boilerplate code, and so on.',
     final:
-      'First of all, this project taught me how to work with the complex global state of the application, with redux and redux toolkit. This showed me the importance of using unit tests to develop complex stateful SPA. I learned how to connect REST API and process and debug requests, got acquainted with the Material UI and Formik libraries.',
-    githubLink: 'https://github.com/dspopravko/04-samurai-way',
-    deployLink: 'https://github.com/dspopravko',
+      'However, dealing with these problems helps develop programmer skills, clearly abstract entities, isolate code and shorten interfaces.',
+    githubLink: 'https://github.com/dspopravko/samurai-way',
+    deployLink: 'https://dspopravko.github.io/samurai-way/',
     coverLogo: socialnetwork,
-    projectStack: ['React', 'Redux', 'Redux Thunk', 'Storybook', 'Unit-tests', 'Formik'],
+    projectStack: ['React', 'Redux', 'Redux Thunk', 'Formik'],
     descriptionShort:
       'Social Network is an rather complex online platform, with many sections, redirection and state managing.',
     descriptionLong:

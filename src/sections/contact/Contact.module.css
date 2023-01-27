@@ -7,6 +7,7 @@
   background-color: var(--bg-color);
   flex-wrap: wrap;
   gap: 40px;
+  padding-bottom: clamp(10px, 5vw, 50vh);
 }
 .title {
   color: var(--text-color);
@@ -102,4 +103,10 @@ textarea::placeholder {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+}
+
+@media only screen and (max-width: 750px) {
+  .wrapper {
+    padding-bottom: 0;
+  }
 }

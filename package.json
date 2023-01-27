@@ -57,7 +57,7 @@
     "prettier": "2.8.3"
   },
   "main": "index.tsx",
-  "repository": "https://github.com/dspopravko/12-portfolio.git",
+  "repository": "https://github.com/dspopravko/portfolio.git",
   "author": "dspopravko <demid1498@gmail.com>",
   "license": "MIT"
 }

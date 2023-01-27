@@ -4,10 +4,12 @@ import profilePictureRmBg from '../../assets/profile/profilePicture2RmBg.png'
 import { ThemeContext } from '../../utilities/Context'
 import { langAbout } from '../../data/lang'
 import { Profile } from '../../components/Profile/Profile'
+import { cvLink } from '../../data/cv/link'
 
 export const About = () => {
   const { locale } = useContext(ThemeContext)
   const l = langAbout[locale]
+  const buttonHandler = () => window.open(cvLink, '_blank')
 
   return (
     <section className={s.wrapper} id={'about'}>
@@ -24,9 +26,11 @@ export const About = () => {
               backgroundSize: 'cover',
             }}
           ></div>
-            <div className={s.btnContainer}>
-              <button className={'button'}>{l.button}</button>
-            </div>
+          <div className={s.btnContainer}>
+            <button className={'button'} onClick={buttonHandler}>
+              {l.button}
+            </button>
+          </div>
         </div>
         <Profile />
       </div>

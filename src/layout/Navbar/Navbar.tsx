@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 import { ThemeContext } from '../../utilities/Context'
 import { langNavbar } from '../../data/lang'
 import { motion } from 'framer-motion'
+import { cvLink } from "../../data/cv/link";
 
 const navbarVariant = {
   hide: {
@@ -41,7 +42,7 @@ export const Navbar = ({ handleClose, animate = false }: { handleClose?: () => v
         )
       })}
       <li>
-        <a target={'_blank'} style={{ color: 'red' }} href="https://youtu.be/dQw4w9WgXcQ" rel="noreferrer">
+        <a target={'_blank'} style={{ color: 'red' }} href={cvLink} rel="noreferrer">
           CV
         </a>
       </li>

@@ -65,7 +65,11 @@ export const skills: SkillType[] = [
     description:'Git'
   },
   {
-    title: 'Figma',
-    description:'Figma'
-  }
+    title: 'HTML',
+    description:'HTML'
+  },
+  {
+    title: 'CSS',
+    description:'CSS'
+  },
 ]
