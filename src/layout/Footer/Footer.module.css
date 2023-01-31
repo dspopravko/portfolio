@@ -45,8 +45,14 @@ p,
 h2 {
   color: var(--text-color);
 }
+h2 {
+  margin-top: 10px;
+}
 
 @media only screen and (max-width: 750px) {
+  h2 {
+    margin-top: 2px;
+  }
   .wrapper {
     min-height: 250px;
     padding-bottom: 60px;

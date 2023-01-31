@@ -96,7 +96,7 @@ export const Contact = () => {
               <FontAwesomeIcon size={'2x'} icon={faTelegram} color={'#416CA6'} />
             </div>
             <div>
-              <a target={'_blank'} href="https://telegram.me/dspopravko" rel="noreferrer">
+              <a target={'_blank'} href="https://telegram.me/dpopravko" rel="noreferrer">
                 Telegram
               </a>
             </div>

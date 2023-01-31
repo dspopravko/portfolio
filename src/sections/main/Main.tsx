@@ -4,11 +4,11 @@ import { ThemeContext } from '../../utilities/Context'
 import { langMain } from '../../data/lang'
 import profilePictureRmBg from "../../assets/profile/profilePictureRmBg.png";
 import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
+import cx from "classnames";
 
 export const Main = ({isLoaded}: {isLoaded: boolean}) => {
   const { locale, height} = useContext(ThemeContext)
   const l = langMain[locale]
-
   const controls = useAnimationControls()
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export const Main = ({isLoaded}: {isLoaded: boolean}) => {
         }}
         animate={controls}
         className={s.wrapper} id={'home'}>
-        <div className={s.welcome}>
+        <div className={cx({[s.welcome]: true, [s.welcomeRu]: locale === 'ru'})}>
           <h1>{l.name}</h1>
           <h2>{l.job}</h2>
           <h3>{l.description}</h3>
@@ -50,7 +50,7 @@ export const Main = ({isLoaded}: {isLoaded: boolean}) => {
                 window.location.href = '#remote'
               }}
             >
-              Contact me
+              {l.contactMe}
             </button>
           </div>
         </div>

@@ -9,7 +9,7 @@ export const education: ExperienceType[] = [
   {
     title: '🎓 Masters degree',
     description: 'Engineer-technologist',
-    dates: '2019-2022'
+    dates: '2019-2021'
   },
   {
     title: '🎓 Bachelor degree',

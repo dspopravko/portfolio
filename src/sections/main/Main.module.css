@@ -30,12 +30,8 @@
 }
 .welcome h1 {
   margin-left: -2px;
-  font-size: clamp(3rem, 5vw, 3.5rem);
-  font-weight: 600;
 }
 .welcome h2 {
-  font-size: clamp(3rem, 5vw, 3.5rem);
-  font-weight: 600;
   background-image: var(--gradient);
   box-shadow: var(--gradient);
   background-clip: text;
@@ -43,7 +39,15 @@
   background-size: 400%;
   animation: bg-animation 5s infinite alternate;
 }
-
+.welcome h1 h2 {
+  font-size: clamp(3rem, 5vw, 3.5rem);
+  font-weight: 600;
+}
+.welcomeRu h1, h2 {
+  line-height: 3.2rem;
+  white-space: pre-wrap;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
 @keyframes bg-animation {
   0% {
     background-position: left;
@@ -51,7 +55,7 @@
   100% {
     background-position: right;
   }
-  
+
 }
 .welcome h3 {
   display: inline-block;
@@ -93,10 +97,12 @@
     grid-template-columns: none;
     align-content: center;
   }
+
   .photo {
     grid-row: 1;
     align-self: end;
   }
+
   .welcome {
     align-self: start;
     max-width: 500px;
@@ -122,6 +128,7 @@
   .welcome {
     max-width: 350px;
   }
+
   .photo {
     min-width: 90%;
     width: clamp(100px, 80vw, 420px);

@@ -5,7 +5,7 @@ export const contact = {
     form: {
       name: 'Name',
       email: 'Email',
-      message: 'Type your message',
+      message: "Do you want to try if it is working?😶‍🌫️",
       button: ['Send', '', 'Mail was sent', 'Something went wrong...'],
     },
   },

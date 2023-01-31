@@ -16,3 +16,7 @@
 .active {
   color: var(--destructive-color);
 }
+.activeRu {
+  color: var(--destructive-color);
+  transform: translateY(-6px);
+}

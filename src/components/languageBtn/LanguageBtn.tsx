@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { localeT, ThemeContext } from '../../utilities/Context'
 import s from './LanguageBtn.module.css'
+import cx from "classnames";
 
 export const LanguageBtn = () => {
   const { locale, setLocale } = useContext(ThemeContext)
@@ -10,9 +11,9 @@ export const LanguageBtn = () => {
 
   return (
     <div className={s.wrapper} onClick={clickHandler}>
-      <span className={locale === localeT.En ? s.active : ''}>En</span>
+      <span className={cx({[s.active]: locale === localeT.En})} >En</span>
       <span className={s.line}></span>
-      <span className={locale === localeT.Ru ? s.active : ''}>Ru</span>
+      <span className={cx({[s.activeRu]: locale === localeT.Ru})}>Ru</span>
     </div>
   )
 }

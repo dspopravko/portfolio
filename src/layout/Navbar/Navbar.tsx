@@ -34,14 +34,12 @@ export const Navbar = ({ handleClose, animate = false }: { handleClose?: () => v
     >
       {Object.entries(l).map((el) => {
         return (
-          <li key={el[0]}>
-            <Link to={el[0]} offset={-80} spy smooth className={s.link} activeClass={s.activeLink}>
+            <Link key={el[0]} to={el[0]} offset={-80} spy smooth className={s.link} activeClass={s.activeLink}>
               {el[1]}
             </Link>
-          </li>
         )
       })}
-      <li>
+      <li className={s.link}>
         <a target={'_blank'} style={{ color: 'red' }} href={cvLink} rel="noreferrer">
           CV
         </a>

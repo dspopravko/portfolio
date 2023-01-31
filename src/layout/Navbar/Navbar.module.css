@@ -10,7 +10,7 @@
   background-color: var(--bg-color);
   transition: var(--transition);
 }
-.navbar li{
+.link{
   user-select: none;
   color: var(--text-color);
   min-width: 90px;
@@ -27,7 +27,7 @@
   color: var(--primary-color);
   transition: var(--transition);
 }
-.navbar li:hover {
+.link:hover {
   background-color: var(--container-color);
 }
 
